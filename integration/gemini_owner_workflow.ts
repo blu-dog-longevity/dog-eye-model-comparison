@@ -17,6 +17,7 @@ export type OwnerDependencies = {
    * Must enforce same dog/photo references and disallow public client inserts.
    */
   saveOwnerAssessment:(args:{photo:EyePhoto;result:GeminiOwnerResult;model:string;promptVersion:string})=>Promise<{displayResultId:string}>;
+  callGemini?:typeof callGeminiOwner;
 };
 export type OwnerConfig={model:string;promptVersion:string;geminiApiKey:string;maxImageBytes:number};
 function estimateBytes(image:ImageInput):number {return Math.floor(image.base64.length*3/4);}
@@ -43,6 +44,6 @@ export async function assessOwnerEye(input:{userJwt:string;photoId:string}, deps
     proSummary:await deps.getSanitizedProContext(photo.dog_id),
     ...(previous&&priorImage?{priorSameEye:{photoId:previous.id,capturedAt:previous.captured_at??"",image:priorImage}}:{})
   };
-  const result=await callGeminiOwner(image,ctx,{apiKey:cfg.geminiApiKey,model:cfg.model});
+  const result=await (deps.callGemini??callGeminiOwner)(image,ctx,{apiKey:cfg.geminiApiKey,model:cfg.model});
   return deps.saveOwnerAssessment({photo,result,model:cfg.model,promptVersion:cfg.promptVersion});
 }
