@@ -10,7 +10,7 @@ The database unique attempt index is used to reject concurrent duplicates.
 from __future__ import annotations
 import json
 import os
-from urllib import request, error
+from urllib import request
 
 class BackendConfigError(RuntimeError):
     pass
@@ -78,7 +78,12 @@ class SupabaseRestRepository:
                 validate_sam_measurement(item)
                 self._call("eye_sam_measurements", "POST",
                            {"model_run_id":run_id,"dog_id":dog_id, **item})
+        elif model_name == "dog_disease_predictor":
+            try:
+                from .dog_disease_validation import dog_disease_payload
+            except ImportError:
+                from dog_disease_validation import dog_disease_payload
+            row = dog_disease_payload(output["source_row"], run_id=run_id, dog_id=dog_id)
+            self._call("eye_classifications", "POST", row)
         else:
-            # DogDiseasePredictor schema validation + Gemini require distinct
-            # adapters before their completed outputs are supported.
-            raise NotImplementedError("Model output writer not yet supported")
+            raise NotImplementedError("Gemini is handled by a separate synthesis worker")
