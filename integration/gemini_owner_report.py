@@ -4,7 +4,10 @@ Gemini supplies visual observations, not veterinary diagnoses. This module does
 not call Gemini or Supabase; validate backend output before display persistence.
 """
 from __future__ import annotations
-from .gemini_assessment_contract import OBSERVATIONS, ALLOWED_OBS, ALLOWED_CHANGE
+try:
+    from .gemini_assessment_contract import OBSERVATIONS, ALLOWED_OBS, ALLOWED_CHANGE
+except ImportError:
+    from gemini_assessment_contract import OBSERVATIONS, ALLOWED_OBS, ALLOWED_CHANGE
 
 def owner_report_payload(result: dict, *, dog_id: str, photo_id: str,
                          gemini_assessment_id: str, prompt_version: str) -> dict:
