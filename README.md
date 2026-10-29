@@ -8,4 +8,6 @@ This is an archived research prototype. Predictions and measurements are not cli
 
 Image credits, individual licenses, model revisions, checkpoint checksums, manual interventions, and known limitations are in **[SOURCES.md](SOURCES.md)**. Derived image lineage is in [provenance/asset-lineage.json](provenance/asset-lineage.json); verify retained files with `sha256sum -c SHA256SUMS`.
 
+[Research behind the SAM measurements](SOURCES.md#research-behind-the-sam-measurements) maps each measurement to canine studies and distinguishes biological rationale from validation of this prototype's exact scores.
+
 Serve locally with `python -m http.server 8000`. GitHub Pages serves the repository root from `main`; no application build is required.
