@@ -3,7 +3,7 @@
  * bytes, clinical context, and an atomic versioned persistence implementation.
  */
 import {callGeminiOwner, type ImageInput, type EyeContext, type GeminiOwnerResult} from "./gemini_owner_backend.ts";
-export type EyePhoto = { id:string; dog_id:string; eye_side:"left"|"right"; storage_bucket:string; storage_path:string; captured_at:string|null };
+export type EyePhoto = { id:string; dog_id:string; eye_side:"left"|"right"|"unknown"; storage_bucket:string; storage_path:string; captured_at:string|null };
 export type OwnerDependencies = {
   /** Must use verified JWT / dog access rules; do not authorize from client dog_id alone. */
   assertCanViewDog:(userJwt:string,dogId:string)=>Promise<void>;
