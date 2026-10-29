@@ -22,7 +22,7 @@ export function createSupabaseOwnerReadDependencies(args:{
   const asUser=()=>{if(!ownerJwt) throw new Error("Unverified owner token required");return {
     apikey:args.publishableKey,Authorization:"Bearer "+ownerJwt
   };};
-  // Uses user JWT and eye_photos RLS, not elevated service access.
+  // Instantiate this dependency object afresh for EACH request. Never reuse across users.\n  // Uses user JWT and eye_photos RLS, not elevated service access.
   const photoRow=async(photoId:string):Promise<EyePhoto|null>=>{
     const q=new URLSearchParams({id:"eq."+photoId,select:"id,dog_id,eye_side,storage_bucket,storage_path,captured_at",limit:"1"});
     const rows=await json(base+"/rest/v1/eye_photos?"+q,asUser());
@@ -63,9 +63,9 @@ export function createSupabaseOwnerReadDependencies(args:{
       if(!current||current.dog_id!==dogId||current.eye_side!==side)return null;
       const q=new URLSearchParams({
         dog_id:"eq."+dogId, eye_side:"eq."+side,id:"neq."+beforePhotoId,
-        submitted_at:"lt."+new Date().toISOString(),
+
         select:"id,dog_id,eye_side,storage_bucket,storage_path,captured_at",
-        order:"submitted_at.desc",limit:"1"
+        order:"submitted_at.desc",limit:"10"
       });
       const rows=await json(base+"/rest/v1/eye_photos?"+q,asUser());
       return rows[0]??null;
