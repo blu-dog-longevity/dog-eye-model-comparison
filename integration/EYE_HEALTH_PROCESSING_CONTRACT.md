@@ -6,7 +6,7 @@ Status: **implementation work in an isolated GitHub branch; not connected to Lov
 
 One uploaded eye photo is the common immutable input for Rady-4, Rady-6, DogDiseasePredictor and SAM 2.1. All run independently. Gemini is a separate synthesis run that consumes the original image, every available completed model result, segmentation outputs, prior same-eye photographs and relevant PRO references. Failures remain visible in research statuses; no output is fabricated.
 
-The owner may see **only the chosen Rady-4 class**, after image and inference-quality review. The approved model is a *provisional candidate*, not clinically validated. A processing failure, uncertain result or unsupported image must produce **Unclear / Needs Review** (not a fifth Rady-4 class). Owner-facing Gemini content is observational and must not convert model agreement into accuracy or claim a medical diagnosis.
+**Architecture decision (2026-10-29): Gemini is the owner-facing image observation and education service.** A successful Gemini-only pass can create an owner report without waiting for Rady-4, Rady-6, DogDiseasePredictor, or SAM. The report must describe visible findings and uncertainty, not a diagnostic classification or unvalidated medical condition. If Gemini cannot confidently evaluate the image, display **Unclear / Needs Review** and an appropriate next action. Rady-4, Rady-6, DogDiseasePredictor, and SAM remain independent *research-only* services and never provide the customer-facing category. Gemini may later run a separately versioned research synthesis using the other model outputs; this must not retroactively overwrite an owner report.
 
 ## Supabase data contract (project: BLU Dog Platform)
 
@@ -18,13 +18,13 @@ The additive initial schema exists; **no live inference writer or upload adapter
 4. `eye_sam_measurements`: one measurement per name/region/run, numeric value (NULL when unavailable), unit, mask private location, formula/version and quality/assistance metadata.
 5. `eye_gemini_assessments`: one structured synthesis per Gemini run; model agreement/disagreement, image comparability, visible findings, SAM observations, PRO links, separate owner/research summaries.
 6. `eye_reference_assessments`: distinct independently reviewed reference findings; never silently use published image captions as clinical ground truth.
-7. `eye_display_results`: exact display snapshot, Rady-4 run reference, explanation and display status.
+7. `eye_display_results`: immutable owner display snapshot. `gemini_assessment_id` references the owner-assessment source; `classifier_run_id` stays NULL for Gemini-owned reports. Store `source='gemini'`, report/prompt version, observation-only labels and quality metadata in `presented_payload` until a dedicated source column is migrated. Do not generate Rady-4 owner labels.
 
 **Service-only writes for initial foundation:** RLS protects the two owner-readable tables by `can_view_dog(dog_id)`. Other research tables have no authenticated-user grants or policies. Processing must use a trusted authenticated backend with authorization; never embed service-role credentials in browsers, GitHub, or model prompts.
 
 ## Critical validation before integration
 
-- The current schema has separate `dog_id` FKs and photo/run references, but does **not yet enforce same-dog integrity across all linked records**. Add composite keys / constraints or trusted transaction-level checks before accepting production writes.
+- Supabase composite foreign keys now enforce matching dog and photo relationships for model runs, Gemini source and display results. Validate all cross-record consistency in worker transactions as well, including `input_run_ids` array provenance.
 - `eye_side='unknown'` exists to preserve legacy uploads. New reporting should require explicit side.
 - Confirm actual source bucket and legacy storage paths per upload: the two private buckets `dog-pro-uploads` and `dog-media` exist; a bucket default is not proof of the storage location.
 - Do not edit `eye_check_submissions` (six existing records at foundation creation) or replace active `process-eye-check`; preserve provenance and plan a reversible adapter.
@@ -67,3 +67,20 @@ Use idempotency keyed to `(photo_id, model_name, model_version, processing_attem
 - [Original model runners](../pipeline/model_runners.py)
 - [Archived visual comparison and limitations](../SOURCES.md)
 - [Original classifier pipeline](../pipeline/run_classifiers.py)
+
+## Updated execution plan: parallel owner + research
+
+```
+authorized owner photo upload / photo history
+    -> Gemini owner-analysis (image + same-eye prior photographs + relevant owner PROs)
+          -> structured observations with explicit uncertainty and provenance
+          -> immutable eye_display_results snapshot (classification-run = NULL)
+    -> independent research queue (not blocking owner delivery)
+          -> Rady-4, Rady-6, DogDiseasePredictor, SAM 2.1
+          -> separately versioned Gemini research-synthesis assessment
+          -> veterinary-reference evaluation (not proof by model agreement)
+```
+
+Owner output requires photo and history authorization, image quality gate, human-readable observation-based explanation, consistent reporting, urgent veterinary referral for concerning signs, and no unsupported diagnosis. No experimental research scores, SAM metrics or contradictory model classifications in the standard customer UI. Existing code that marks Rady-4 as a display candidate is **legacy draft code, superseded for owner display**; do not call it from the application. Keep it for historical test comparison, with deprecation annotations or tests before release.
+
+Owner Gemini must work with zero external model runs; research synthesis explicitly expects available run IDs and reports missing models. Keep these purposes in separate prompt versions and run kinds. Preserve all existing tables and legacy Eye Check records, and keep the published app unchanged pending explicit release authorization.
