@@ -24,7 +24,7 @@ export function createSupabaseOwnerReadDependencies(args:{
   };};
   // Instantiate this dependency object afresh for EACH request. Never reuse across users.\n  // Uses user JWT and eye_photos RLS, not elevated service access.
   const photoRow=async(photoId:string):Promise<EyePhoto|null>=>{
-    const q=new URLSearchParams({id:"eq."+photoId,select:"id,dog_id,eye_side,storage_bucket,storage_path,captured_at",limit:"1"});
+    const q=new URLSearchParams({id:"eq."+photoId,select:"id,dog_id,eye_side,storage_bucket,storage_path,captured_at,submitted_at",limit:"1"});
     const rows=await json(base+"/rest/v1/eye_photos?"+q,asUser());
     return rows[0]??null;
   };
@@ -64,11 +64,13 @@ export function createSupabaseOwnerReadDependencies(args:{
       const q=new URLSearchParams({
         dog_id:"eq."+dogId, eye_side:"eq."+side,id:"neq."+beforePhotoId,
 
-        select:"id,dog_id,eye_side,storage_bucket,storage_path,captured_at",
-        order:"submitted_at.desc",limit:"10"
+        select:"id,dog_id,eye_side,storage_bucket,storage_path,captured_at,submitted_at",
+        order:"submitted_at.desc",limit:"100"
       });
       const rows=await json(base+"/rest/v1/eye_photos?"+q,asUser());
-      return rows[0]??null;
+      const currentTime=Date.parse(current.captured_at??(current as EyePhoto & {submitted_at?:string}).submitted_at??"");
+      if(!Number.isFinite(currentTime))return null;
+      return rows.filter((r:EyePhoto & {submitted_at?:string})=>Date.parse(r.captured_at??r.submitted_at??"")<currentTime).sort((a:EyePhoto & {submitted_at?:string},b:EyePhoto & {submitted_at?:string})=>Date.parse(b.captured_at??b.submitted_at??"")-Date.parse(a.captured_at??a.submitted_at??""))[0]??null;
     },
     getSanitizedProContext:async()=>({symptoms:[],interventions:[],vetFindings:[]}),
   };
