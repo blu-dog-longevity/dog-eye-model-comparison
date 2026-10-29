@@ -1,0 +1,51 @@
+name: Eye output contract checks
+
+on:
+  pull_request:
+    paths:
+      - "integration/**"
+      - ".github/workflows/eye-output-contract.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Validate archived class order against integration contract
+        run: |
+          python - <<'PY'
+          import ast
+          from pathlib import Path
+          from integration.eye_output_validation import RADY4, RADY6
+          source = ast.parse(Path("pipeline/model_runners.py").read_text())
+          labels = {}
+          for node in source.body:
+              if isinstance(node, ast.Assign):
+                  for target in node.targets:
+                      if isinstance(target, ast.Name) and target.id in ("RADY4_CLASSES", "RADY6_CLASSES"):
+                          labels[target.id] = tuple(ast.literal_eval(node.value))
+          assert RADY4 == labels["RADY4_CLASSES"]
+          assert RADY6 == labels["RADY6_CLASSES"]
+          print("Rady class orders match archived source")
+          PY
+      - name: Run offline result-contract tests
+        run: python -m unittest discover -s integration -p "test_*.py" -v
+
+  gemini-owner-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+      - name: Check TypeScript owner backend
+        run: deno check integration/gemini_owner_backend.ts integration/gemini_owner_workflow.ts integration/supabase_owner_reads.ts integration/supabase_owner_writer.ts
+      - name: Run Gemini contract tests without API keys or network
+        run: deno test integration/gemini_owner_backend_test.ts integration/gemini_owner_workflow_test.ts integration/supabase_owner_writer_test.ts
