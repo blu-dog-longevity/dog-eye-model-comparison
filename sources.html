@@ -1,0 +1,152 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sources & provenance · BLU Dog</title><style>body{max-width:980px;margin:auto;padding:32px 20px;font:16px/1.6 system-ui;color:#172026;background:#f7fafa}a{color:#007467}table{display:block;overflow-x:auto;border-collapse:collapse}td,th{padding:10px;border:1px solid #ccd9d9;text-align:left}code{overflow-wrap:anywhere}h2{margin-top:40px}</style><a href="pipeline/runs/report/">← Comparison report</a> · <a href="SOURCES.md">Download Markdown</a><h1>Sources and provenance — BLU Dog eye model comparison</h1>
+<p>This is the archived August 26, 2026 comparison of existing models on eight public canine-eye photographs. The website publishes the saved results; it does not run inference or accept uploads. Source descriptions and model predictions are not veterinary ground truth.</p>
+<h2>Models and roles</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Input and role</th>
+<th>Original publisher source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rady YOLO detector</td>
+<td>Whole photograph → eye boxes. Shared by both Rady classifiers; confidence threshold 0.25.</td>
+<td><a href="https://huggingface.co/spaces/abdelrahmanrady/dog-eye-diagnosis-AI/blob/7f02c10e6a2bd916dd109fbd85ac28c2daa65e88/app.py">Pinned source</a></td>
+</tr>
+<tr>
+<td>Rady-4</td>
+<td>Detected eye crop → EfficientNet-B3 with GeM pooling and squeeze/excitation; cataract, cherry eye, iris atrophy, healthy.</td>
+<td><a href="https://huggingface.co/spaces/abdelrahmanrady/dog-eye-diagnosis-AI/blob/7f02c10e6a2bd916dd109fbd85ac28c2daa65e88/app.py">Pinned source</a></td>
+</tr>
+<tr>
+<td>Rady-6</td>
+<td>Same detector → separate six-output EfficientNet classifier; adds conjunctivitis and glaucoma. Class order is retained in the runner.</td>
+<td><a href="https://huggingface.co/spaces/abdelrahmanrady/AI-Eye-Dog/blob/de6a686e89122722f9f4ab5030fa3e2c1b9e670a/app.py">Pinned source</a></td>
+</tr>
+<tr>
+<td>DogDiseasePredictor</td>
+<td>Whole photograph → ViT, 20 mixed canine labels. Cherry eye and nuclear sclerosis are the two eye-specific labels.</td>
+<td><a href="https://huggingface.co/spaces/AnishKumbhar/DogDiseasePredictor/blob/d1f3905a61644a888faadd0657f4d1b158efb755/app.py">Pinned source</a></td>
+</tr>
+<tr>
+<td>SAM 2.1 Hiera Tiny</td>
+<td>Boxes and/or positive/negative points → masks. No disease classification.</td>
+<td><a href="https://github.com/facebookresearch/sam2/tree/2b90b9f5ceec907a1c18123530e92e794ad901a4">Meta source at the recorded revision</a></td>
+</tr>
+<tr>
+<td>DogEyeSeg4 (not run)</td>
+<td>A separate 145-image research dataset with masks; not a classifier used in this comparison.</td>
+<td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11467576/">Burić et al., 2024</a></td>
+</tr>
+</tbody>
+</table>
+<p>The recovered <a href="pipeline/model_runners.py">model runner</a>, <a href="pipeline/run_classifiers.py">classifier driver</a>, and <a href="pipeline/requirements.txt">dependency list</a> preserve the implementation. Rady crops use 15% padding, resize to 224 × 224, and ImageNet normalization. DogDiseasePredictor receives the whole image resized to 224 × 224. Scores are model outputs, not calibrated probabilities of disease.</p>
+<h3>Checkpoint identities</h3>
+<p>These URLs and expected SHA-256 values come from the original fetch script. Model weight files are not redistributed here. The publication did not redownload or rerun them; these are recorded expectations, not a new weight audit. Upstream code and weights retain their own terms; availability on Hugging Face is not a blanket reuse license.</p>
+<ul>
+<li><strong>models/rady/yolo_eye_detection_best.pt</strong>: <a href="https://huggingface.co/spaces/abdelrahmanrady/dog-eye-diagnosis-AI/resolve/7f02c10e6a2bd916dd109fbd85ac28c2daa65e88/yolo_eye_detection_best.pt">pinned download</a>; SHA-256 <code>e5c9f8223d12c878692ca470a18490920ec27bb3515dcaaf9fe49ab6e4fae6af</code>.</li>
+<li><strong>models/rady/rady4_efficientnet.pth</strong>: <a href="https://huggingface.co/spaces/abdelrahmanrady/dog-eye-diagnosis-AI/resolve/7f02c10e6a2bd916dd109fbd85ac28c2daa65e88/efficientnet_b3_se_gem_best.pth">pinned download</a>; SHA-256 <code>52abe206513ef94d40d4421dc29b2cb1d970db7ed78d438aa3ce89ff5236949c</code>.</li>
+<li><strong>models/rady/rady6_efficientnet.pth</strong>: <a href="https://huggingface.co/spaces/abdelrahmanrady/AI-Eye-Dog/resolve/de6a686e89122722f9f4ab5030fa3e2c1b9e670a/efficientnet_b3_se_gem_best.pth">pinned download</a>; SHA-256 <code>a22d8ad31e89ddd6b5a6eb878317631253c81e4f0375dcfc13582b0928a0f2d8</code>.</li>
+<li><strong>models/dog_disease/best_model.pth</strong>: <a href="https://huggingface.co/spaces/AnishKumbhar/DogDiseasePredictor/resolve/d1f3905a61644a888faadd0657f4d1b158efb755/best_model.pth">pinned download</a>; SHA-256 <code>214824b66bb9988b90dc3e699fcbbf37e5ab05b85657bfae45389b452e6dfd89</code>.</li>
+<li><strong>models/sam2/sam2.1_hiera_tiny.pt</strong>: <a href="https://dl.fbaipublicfiles.com/segment_anything_2/092824/sam2.1_hiera_tiny.pt">pinned download</a>; SHA-256 <code>7402e0d864fa82708a20fbd15bc84245c2f26dff0eb43a4b5b93452deb34be69</code>.</li>
+</ul>
+<h2>Image credits and licenses</h2>
+<p>All eight inputs are public Wikimedia Commons files. The original <a href="pipeline/sources.json">sources.json</a> is preserved unchanged. Creator and license fields were checked against the Commons API on October 29, 2026; the <a href="provenance/wikimedia-metadata.json">metadata response</a> is retained. Titles below link to the file pages, which provide the full source and licensing notices.</p>
+<p>BLU Dog generated eye crops, yellow detection boxes, segmentation masks, transparent cutouts, colored overlays, and prompt diagrams from these inputs. Those changes are analytical annotations, not changes to the original source photographs. Adaptations of CC BY-SA images are offered under the same respective CC BY-SA license shown below; attribution to the original photographer remains required. Public-domain originals remain public domain. No photographer endorses these predictions.</p>
+<h3>01_dog_eye_macro.jpg</h3>
+<ul>
+<li><strong>Source:</strong> <a href="https://commons.wikimedia.org/wiki/File:Dog_eye_makro.jpg">Close-up dog eye</a>.</li>
+<li><strong>Creator:</strong> Christian Pietzsch. <strong>License:</strong> <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</li>
+<li><strong>Recorded download:</strong> <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Dog_eye_makro.jpg/1920px-Dog_eye_makro.jpg">Wikimedia image URL</a>.</li>
+<li><strong>Retained input:</strong> <a href="pipeline/data/images/01_dog_eye_macro.jpg">image</a>, 1920 × 1284 pixels, 333,263 bytes.</li>
+<li><strong>SHA-256:</strong> <code>6ad8ded208ac45fec39db35239f4852dc9b6dc313e3a19922bd22c9e3e4c5a35</code>.</li>
+</ul>
+<h3>02_dalmatian_eye.jpg</h3>
+<ul>
+<li><strong>Source:</strong> <a href="https://commons.wikimedia.org/wiki/File:Oko_dalmaty%C5%84czyka.JPG">Close-up Dalmatian eye</a>.</li>
+<li><strong>Creator:</strong> Olaf. <strong>License:</strong> <a href="https://commons.wikimedia.org/wiki/File:Oko_dalmaty%C5%84czyka.JPG">Public domain</a>.</li>
+<li><strong>Recorded download:</strong> <a href="https://upload.wikimedia.org/wikipedia/commons/f/fa/Oko_dalmaty%C5%84czyka.JPG">Wikimedia image URL</a>.</li>
+<li><strong>Retained input:</strong> <a href="pipeline/data/images/02_dalmatian_eye.jpg">image</a>, 640 × 480 pixels, 64,202 bytes.</li>
+<li><strong>SHA-256:</strong> <code>fd0a5a3b0ad1bcc9b836b0709182a9c74fa8693af8e3936d35c32d3ad7027382</code>.</li>
+</ul>
+<h3>03_cataract_labrador.jpg</h3>
+<ul>
+<li><strong>Source:</strong> <a href="https://commons.wikimedia.org/wiki/File:Cataract_in_labrador.jpg">Described by source as cataract in a Labrador</a>.</li>
+<li><strong>Creator:</strong> Nithin1111991. <strong>License:</strong> <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.</li>
+<li><strong>Recorded download:</strong> <a href="https://upload.wikimedia.org/wikipedia/commons/8/84/Cataract_in_labrador.jpg">Wikimedia image URL</a>.</li>
+<li><strong>Retained input:</strong> <a href="pipeline/data/images/03_cataract_labrador.jpg">image</a>, 459 × 378 pixels, 25,333 bytes.</li>
+<li><strong>SHA-256:</strong> <code>942bb28224bc8b16758045f1730b66cff9d375c64654d923cac112aee087d055</code>.</li>
+</ul>
+<h3>04_cataract_dog.jpg</h3>
+<ul>
+<li><strong>Source:</strong> <a href="https://commons.wikimedia.org/wiki/File:C%C3%A3o_com_catarata.jpg">Described by source as a dog with cataract</a>.</li>
+<li><strong>Creator:</strong> André Koehne. <strong>License:</strong> <a href="https://commons.wikimedia.org/wiki/File:C%C3%A3o_com_catarata.jpg">Public domain</a>.</li>
+<li><strong>Recorded download:</strong> <a href="https://upload.wikimedia.org/wikipedia/commons/e/e5/C%C3%A3o_com_catarata.jpg">Wikimedia image URL</a>.</li>
+<li><strong>Retained input:</strong> <a href="pipeline/data/images/04_cataract_dog.jpg">image</a>, 1719 × 1823 pixels, 470,586 bytes.</li>
+<li><strong>SHA-256:</strong> <code>693dd58d9201c0ac285367ab29b5ac3bd7ff1c9c8ae0494cfae1f0068a2f238c</code>.</li>
+</ul>
+<h3>05_cherry_eye.jpg</h3>
+<ul>
+<li><strong>Source:</strong> <a href="https://commons.wikimedia.org/wiki/File:Beagle%E2%80%93Cocker_Spaniel_Mix_with_cherry_eye.jpg">Described by source as a Beagle-Cocker Spaniel mix with cherry eye</a>.</li>
+<li><strong>Creator:</strong> Tcr25. <strong>License:</strong> <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</li>
+<li><strong>Recorded download:</strong> <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Beagle%E2%80%93Cocker_Spaniel_Mix_with_cherry_eye.jpg/1920px-Beagle%E2%80%93Cocker_Spaniel_Mix_with_cherry_eye.jpg">Wikimedia image URL</a>.</li>
+<li><strong>Retained input:</strong> <a href="pipeline/data/images/05_cherry_eye.jpg">image</a>, 1920 × 1080 pixels, 580,871 bytes.</li>
+<li><strong>SHA-256:</strong> <code>8832edbe1de0e271b2a4af10e459e7f97cf7eb98ee48f38bf8cdf489ce758aa0</code>.</li>
+</ul>
+<h3>06_prolapsed_third_eyelid.jpg</h3>
+<ul>
+<li><strong>Source:</strong> <a href="https://commons.wikimedia.org/wiki/File:Prolapsed_gland_of_the_third_eyelid.JPG">Described by source as a prolapsed gland of the third eyelid</a>.</li>
+<li><strong>Creator:</strong> Joel Mills. <strong>License:</strong> <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.</li>
+<li><strong>Recorded download:</strong> <a href="https://upload.wikimedia.org/wikipedia/commons/7/77/Prolapsed_gland_of_the_third_eyelid.JPG">Wikimedia image URL</a>.</li>
+<li><strong>Retained input:</strong> <a href="pipeline/data/images/06_prolapsed_third_eyelid.jpg">image</a>, 1849 × 1317 pixels, 435,149 bytes.</li>
+<li><strong>SHA-256:</strong> <code>c0d9987ea397d5fa0ab6e44a65e251ee67feddf53a838131edda7aa9880f9f1b</code>.</li>
+</ul>
+<h3>07_affected_nictitating_membrane.jpg</h3>
+<ul>
+<li><strong>Source:</strong> <a href="https://commons.wikimedia.org/wiki/File:Affected_nicitating_membrane.jpg">Described by source as an affected nictitating membrane</a>.</li>
+<li><strong>Creator:</strong> Edward Morgan. <strong>License:</strong> <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</li>
+<li><strong>Recorded download:</strong> <a href="https://upload.wikimedia.org/wikipedia/commons/e/e2/Affected_nicitating_membrane.jpg">Wikimedia image URL</a>.</li>
+<li><strong>Retained input:</strong> <a href="pipeline/data/images/07_affected_nictitating_membrane.jpg">image</a>, 1593 × 2390 pixels, 1,379,724 bytes.</li>
+<li><strong>SHA-256:</strong> <code>f25dc89e8ec327b989d31e562af615369068568356a226f8a7c3cf6258e0ed75</code>.</li>
+</ul>
+<h3>08_iris_coloboma.png</h3>
+<ul>
+<li><strong>Source:</strong> <a href="https://commons.wikimedia.org/wiki/File:Left_iris_coloboma_in_border_collie.png">Described by source as a left iris coloboma in a Border Collie</a>.</li>
+<li><strong>Creator:</strong> Timdwilliamson. <strong>License:</strong> <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</li>
+<li><strong>Recorded download:</strong> <a href="https://upload.wikimedia.org/wikipedia/commons/b/b3/Left_iris_coloboma_in_border_collie.png">Wikimedia image URL</a>.</li>
+<li><strong>Retained input:</strong> <a href="pipeline/data/images/08_iris_coloboma.png">image</a>, 1493 × 568 pixels, 1,368,965 bytes.</li>
+<li><strong>SHA-256:</strong> <code>ccfb41a29a8c9e56e34adf1668ca1c81708d8ad0a20dad5df820575dae24d120</code>.</li>
+</ul>
+<h2>How the outputs were produced</h2>
+<ol>
+<li>The same eight photographs were supplied to Rady-4, Rady-6, and DogDiseasePredictor. The Rady detector produced nine crop rows per classifier; two additional image rows record detector misses, for 11 rows per Rady sheet. DogDiseasePredictor has eight whole-image rows.</li>
+<li>The first SAM pass used the Rady boxes plus manually supplied boxes for the two detector misses. Its 11 masks and descriptors are retained in <a href="pipeline/runs/sam2/metrics.json">SAM results</a>, <a href="pipeline/runs/report/csv/sam2_metrics.csv">CSV</a>, and the workbook. This pass is not a visible tab in the final August report.</li>
+<li>The targeted SAM pass used manual boxes, positive/negative clicks, and manually selected mask candidates for two eyes in the coloboma image and one dark Dalmatian eye. Exact coordinates and candidate choices are in <a href="pipeline/run_targeted_sam.py">run_targeted_sam.py</a> and <a href="pipeline/runs/targeted-sam/results.json">results.json</a>. The dark-eye attempt failed to separate pupil from iris, so its pupil/iris metrics were withheld.</li>
+<li>The report uses saved classifier JSON, saved SAM JSON, and the images. It does not infer new labels when opened. <a href="pipeline/build_report.py">build_report.py</a> generates the tabbed HTML, CSVs, workbook, and detection-box illustrations.</li>
+</ol>
+<p>The targeted area ratio is pupil-mask area divided by iris-disk-mask area after intersecting the pupil with the iris disk. The equivalent-diameter ratio is the square root of that ratio. Shape asymmetry compares a mask with its horizontal reflection. Center offset is normalized by the equivalent iris radius. Color descriptors depend on illumination and camera settings. These quantities are exploratory pixel measurements, not validated clinical measurements. Exact formulas are in <a href="pipeline/run_sam_metrics.py">run_sam_metrics.py</a> and <a href="pipeline/run_targeted_sam.py">run_targeted_sam.py</a>.</p>
+<h2>Known limitations visible in the original results</h2>
+<ul>
+<li>The Rady detector misses two input images, duplicates the visible Dalmatian eye, and detects the nose in another image. The report preserves these cases and marks the duplicate and nose detection.</li>
+<li>The two Rady classifiers disagree on some crops. Their predictions and confidence scores are retained as produced.</li>
+<li>DogDiseasePredictor gives diffuse scores on this set and frequently selects a non-eye class. No diagnostic accuracy estimate follows from these examples.</li>
+<li>SAM candidate selection was manual for the targeted examples. The saved ratios are not automated ground truth or evidence of disease.</li>
+<li>Eight selected public images do not form an independently labeled clinical benchmark. No sensitivity, specificity, Dice score against expert masks, or external validation was established here.</li>
+</ul>
+<h2>Archive history and reproducibility</h2>
+<p>The original classifier source and image manifest were recovered from Git commit <code>d7a2a3cb35939a8a0139b423a3f0f06fbac02d24</code> of <code>blu-dog-longevity/blu-dog-longevity</code>, under <code>prototypes/canine-eye-pipeline/</code>. Later SAM and report-builder changes were recovered from the recorded August 26 editing session. The saved images and result files survived in the local prototype archive. Private session transcripts and unrelated platform files are not part of this public package.</p>
+<p>Before adding publication links, running the recovered builder against the saved results reproduced the original report HTML byte for byte. The <a href="provenance/original-report.sha256">original HTML checksum</a> records that comparison target. Publication changes add navigation, image credits, and this source record; the model outputs are unchanged. The archived workbook is retained byte for byte. No model inference was rerun for publication.</p>
+<p><a href="SHA256SUMS">SHA256SUMS</a> identifies the published source files, inputs, raw results, derived images, and downloads. <a href="provenance/asset-lineage.json">asset-lineage.json</a> maps every published image asset to its input photograph, transformation, creator, and license. Hashes identify these retained bytes; they do not establish veterinary ground truth.</p>
+<p>For a local static preview, run <code>python -m http.server 8000</code> from the repository root. To regenerate the presentation from saved outputs, install Pillow and openpyxl and run <code>python pipeline/build_report.py</code>. No model downloads are required for that step. Full inference instructions and the historical dependency pins are in <a href="pipeline/README.md">pipeline/README.md</a>. The historical dependency list is not a complete environment lock; exact inference reproducibility on a fresh machine has not been revalidated.</p>
+<h2>Files to inspect</h2>
+<ul>
+<li><a href="pipeline/runs/first-pass/results.json">Classifier predictions and detector boxes</a></li>
+<li><a href="pipeline/runs/sam2/metrics.json">SAM mask descriptors</a></li>
+<li><a href="pipeline/runs/targeted-sam/results.json">Targeted SAM prompts, candidate scores, and measurements</a></li>
+<li><a href="pipeline/runs/report/model_outputs.xlsx">Excel workbook</a></li>
+<li><a href="pipeline/sources.json">Image source manifest</a></li>
+<li><a href="provenance/models.json">Checkpoint manifest</a></li>
+<li><a href="pipeline/README.md">Implementation</a></li>
+</ul></html>

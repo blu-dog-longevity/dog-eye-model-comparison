@@ -1,0 +1,69 @@
+{
+  "purpose": "Public prototype inputs only. Source descriptions are not veterinary ground truth.",
+  "images": [
+    {
+      "file": "01_dog_eye_macro.jpg",
+      "source_description": "Close-up dog eye",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Dog_eye_makro.jpg/1920px-Dog_eye_makro.jpg",
+      "page": "https://commons.wikimedia.org/wiki/File:Dog_eye_makro.jpg",
+      "creator": "Christian Pietzsch",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "file": "02_dalmatian_eye.jpg",
+      "source_description": "Close-up Dalmatian eye",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Oko_dalmaty%C5%84czyka.JPG",
+      "page": "https://commons.wikimedia.org/wiki/File:Oko_dalmaty%C5%84czyka.JPG",
+      "creator": "Olaf",
+      "license": "Public domain"
+    },
+    {
+      "file": "03_cataract_labrador.jpg",
+      "source_description": "Described by source as cataract in a Labrador",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Cataract_in_labrador.jpg",
+      "page": "https://commons.wikimedia.org/wiki/File:Cataract_in_labrador.jpg",
+      "creator": "Nithin1111991",
+      "license": "CC BY-SA 3.0"
+    },
+    {
+      "file": "04_cataract_dog.jpg",
+      "source_description": "Described by source as a dog with cataract",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/C%C3%A3o_com_catarata.jpg",
+      "page": "https://commons.wikimedia.org/wiki/File:C%C3%A3o_com_catarata.jpg",
+      "creator": "Andre Koehne",
+      "license": "Public domain"
+    },
+    {
+      "file": "05_cherry_eye.jpg",
+      "source_description": "Described by source as a Beagle-Cocker Spaniel mix with cherry eye",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Beagle%E2%80%93Cocker_Spaniel_Mix_with_cherry_eye.jpg/1920px-Beagle%E2%80%93Cocker_Spaniel_Mix_with_cherry_eye.jpg",
+      "page": "https://commons.wikimedia.org/wiki/File:Beagle%E2%80%93Cocker_Spaniel_Mix_with_cherry_eye.jpg",
+      "creator": "Tcr25",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "file": "06_prolapsed_third_eyelid.jpg",
+      "source_description": "Described by source as a prolapsed gland of the third eyelid",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/77/Prolapsed_gland_of_the_third_eyelid.JPG",
+      "page": "https://commons.wikimedia.org/wiki/File:Prolapsed_gland_of_the_third_eyelid.JPG",
+      "creator": "Joel Mills",
+      "license": "CC BY-SA 3.0"
+    },
+    {
+      "file": "07_affected_nictitating_membrane.jpg",
+      "source_description": "Described by source as an affected nictitating membrane",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Affected_nicitating_membrane.jpg",
+      "page": "https://commons.wikimedia.org/wiki/File:Affected_nicitating_membrane.jpg",
+      "creator": "Edward Morgan",
+      "license": "CC BY-SA 2.0"
+    },
+    {
+      "file": "08_iris_coloboma.png",
+      "source_description": "Described by source as a left iris coloboma in a Border Collie",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Left_iris_coloboma_in_border_collie.png",
+      "page": "https://commons.wikimedia.org/wiki/File:Left_iris_coloboma_in_border_collie.png",
+      "creator": "Timdwilliamson",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

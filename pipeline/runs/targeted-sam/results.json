@@ -1,0 +1,271 @@
+[
+  {
+    "id": "08_left_eye",
+    "image": "08_iris_coloboma.png",
+    "eye": "left",
+    "status": "candidate",
+    "reason": "",
+    "pupil_prompt": {
+      "box": [
+        225,
+        195,
+        340,
+        365
+      ],
+      "points": [
+        [
+          280,
+          260
+        ],
+        [
+          280,
+          330
+        ],
+        [
+          205,
+          270
+        ],
+        [
+          365,
+          270
+        ]
+      ],
+      "labels": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "selected_candidate": 2,
+      "selected_score": 0.812591,
+      "candidate_scores": [
+        0.676038,
+        0.812591,
+        0.861411
+      ]
+    },
+    "iris_prompt": {
+      "box": [
+        170,
+        165,
+        405,
+        415
+      ],
+      "points": [
+        [
+          210,
+          285
+        ],
+        [
+          360,
+          285
+        ],
+        [
+          285,
+          360
+        ]
+      ],
+      "labels": [
+        1,
+        1,
+        1
+      ],
+      "selected_candidate": 3,
+      "selected_score": 0.900541,
+      "candidate_scores": [
+        0.901587,
+        0.844549,
+        0.900541
+      ]
+    },
+    "prompt_view": "runs/targeted-sam/08_left_eye_prompts.jpg",
+    "overlay": "runs/targeted-sam/08_left_eye_overlay.jpg",
+    "mask_view": "runs/targeted-sam/08_left_eye_masks.png",
+    "pupil_area_px": 14739,
+    "iris_disk_area_px": 34969,
+    "pupil_iris_area_ratio": 0.421488,
+    "pupil_iris_equivalent_diameter_ratio": 0.649221,
+    "pupil_shape_asymmetry": 0.203985,
+    "pupil_center_offset_iris_radius": 0.067844,
+    "iris_mean_red": 63.013,
+    "iris_mean_green": 72.717,
+    "iris_mean_blue": 81.839,
+    "iris_mean_saturation": 0.29783
+  },
+  {
+    "id": "08_right_eye",
+    "image": "08_iris_coloboma.png",
+    "eye": "right",
+    "status": "candidate",
+    "reason": "",
+    "pupil_prompt": {
+      "box": [
+        1115,
+        165,
+        1275,
+        325
+      ],
+      "points": [
+        [
+          1190,
+          240
+        ],
+        [
+          1110,
+          245
+        ],
+        [
+          1290,
+          245
+        ],
+        [
+          1190,
+          345
+        ]
+      ],
+      "labels": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "selected_candidate": 2,
+      "selected_score": 0.807318,
+      "candidate_scores": [
+        0.715207,
+        0.807318,
+        0.816715
+      ]
+    },
+    "iris_prompt": {
+      "box": [
+        1095,
+        155,
+        1300,
+        365
+      ],
+      "points": [
+        [
+          1125,
+          270
+        ],
+        [
+          1260,
+          270
+        ],
+        [
+          1190,
+          325
+        ]
+      ],
+      "labels": [
+        1,
+        1,
+        1
+      ],
+      "selected_candidate": 3,
+      "selected_score": 0.860577,
+      "candidate_scores": [
+        0.837979,
+        0.801379,
+        0.860577
+      ]
+    },
+    "prompt_view": "runs/targeted-sam/08_right_eye_prompts.jpg",
+    "overlay": "runs/targeted-sam/08_right_eye_overlay.jpg",
+    "mask_view": "runs/targeted-sam/08_right_eye_masks.png",
+    "pupil_area_px": 10829,
+    "iris_disk_area_px": 25870,
+    "pupil_iris_area_ratio": 0.418593,
+    "pupil_iris_equivalent_diameter_ratio": 0.646988,
+    "pupil_shape_asymmetry": 0.328987,
+    "pupil_center_offset_iris_radius": 0.34593,
+    "iris_mean_red": 106.716,
+    "iris_mean_green": 113.322,
+    "iris_mean_blue": 136.444,
+    "iris_mean_saturation": 0.257451
+  },
+  {
+    "id": "02_dark_eye",
+    "image": "02_dalmatian_eye.jpg",
+    "eye": "single visible eye",
+    "status": "failed_targeting",
+    "reason": "The pupil and iris are too similar in contrast; both prompts select most of the exposed eye.",
+    "pupil_prompt": {
+      "box": [
+        220,
+        160,
+        410,
+        320
+      ],
+      "points": [
+        [
+          300,
+          225
+        ],
+        [
+          210,
+          235
+        ],
+        [
+          425,
+          235
+        ],
+        [
+          310,
+          335
+        ]
+      ],
+      "labels": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "selected_candidate": 3,
+      "selected_score": 0.904739,
+      "candidate_scores": [
+        0.869666,
+        0.854005,
+        0.904739
+      ]
+    },
+    "iris_prompt": {
+      "box": [
+        185,
+        135,
+        475,
+        350
+      ],
+      "points": [
+        [
+          220,
+          245
+        ],
+        [
+          425,
+          245
+        ],
+        [
+          320,
+          315
+        ]
+      ],
+      "labels": [
+        1,
+        1,
+        1
+      ],
+      "selected_candidate": 3,
+      "selected_score": 0.848138,
+      "candidate_scores": [
+        0.801827,
+        0.759411,
+        0.848138
+      ]
+    },
+    "prompt_view": "runs/targeted-sam/02_dark_eye_prompts.jpg",
+    "overlay": "runs/targeted-sam/02_dark_eye_overlay.jpg",
+    "mask_view": "runs/targeted-sam/02_dark_eye_masks.png"
+  }
+]

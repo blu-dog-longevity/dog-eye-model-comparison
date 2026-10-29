@@ -1,0 +1,614 @@
+[
+  {
+    "path": "pipeline/data/images/01_dog_eye_macro.jpg",
+    "source_input": "pipeline/data/images/01_dog_eye_macro.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Dog_eye_makro.jpg",
+    "creator": "Christian Pietzsch",
+    "license": "CC BY-SA 4.0",
+    "transformation": "Original retained input",
+    "sha256": "6ad8ded208ac45fec39db35239f4852dc9b6dc313e3a19922bd22c9e3e4c5a35"
+  },
+  {
+    "path": "pipeline/data/images/02_dalmatian_eye.jpg",
+    "source_input": "pipeline/data/images/02_dalmatian_eye.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Oko_dalmaty%C5%84czyka.JPG",
+    "creator": "Olaf",
+    "license": "Public domain",
+    "transformation": "Original retained input",
+    "sha256": "fd0a5a3b0ad1bcc9b836b0709182a9c74fa8693af8e3936d35c32d3ad7027382"
+  },
+  {
+    "path": "pipeline/data/images/03_cataract_labrador.jpg",
+    "source_input": "pipeline/data/images/03_cataract_labrador.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Cataract_in_labrador.jpg",
+    "creator": "Nithin1111991",
+    "license": "CC BY-SA 3.0",
+    "transformation": "Original retained input",
+    "sha256": "942bb28224bc8b16758045f1730b66cff9d375c64654d923cac112aee087d055"
+  },
+  {
+    "path": "pipeline/data/images/04_cataract_dog.jpg",
+    "source_input": "pipeline/data/images/04_cataract_dog.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:C%C3%A3o_com_catarata.jpg",
+    "creator": "Andre Koehne",
+    "license": "Public domain",
+    "transformation": "Original retained input",
+    "sha256": "693dd58d9201c0ac285367ab29b5ac3bd7ff1c9c8ae0494cfae1f0068a2f238c"
+  },
+  {
+    "path": "pipeline/data/images/05_cherry_eye.jpg",
+    "source_input": "pipeline/data/images/05_cherry_eye.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Beagle%E2%80%93Cocker_Spaniel_Mix_with_cherry_eye.jpg",
+    "creator": "Tcr25",
+    "license": "CC BY-SA 4.0",
+    "transformation": "Original retained input",
+    "sha256": "8832edbe1de0e271b2a4af10e459e7f97cf7eb98ee48f38bf8cdf489ce758aa0"
+  },
+  {
+    "path": "pipeline/data/images/06_prolapsed_third_eyelid.jpg",
+    "source_input": "pipeline/data/images/06_prolapsed_third_eyelid.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Prolapsed_gland_of_the_third_eyelid.JPG",
+    "creator": "Joel Mills",
+    "license": "CC BY-SA 3.0",
+    "transformation": "Original retained input",
+    "sha256": "c0d9987ea397d5fa0ab6e44a65e251ee67feddf53a838131edda7aa9880f9f1b"
+  },
+  {
+    "path": "pipeline/data/images/07_affected_nictitating_membrane.jpg",
+    "source_input": "pipeline/data/images/07_affected_nictitating_membrane.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Affected_nicitating_membrane.jpg",
+    "creator": "Edward Morgan",
+    "license": "CC BY-SA 2.0",
+    "transformation": "Original retained input",
+    "sha256": "f25dc89e8ec327b989d31e562af615369068568356a226f8a7c3cf6258e0ed75"
+  },
+  {
+    "path": "pipeline/data/images/08_iris_coloboma.png",
+    "source_input": "pipeline/data/images/08_iris_coloboma.png",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Left_iris_coloboma_in_border_collie.png",
+    "creator": "Timdwilliamson",
+    "license": "CC BY-SA 4.0",
+    "transformation": "Original retained input",
+    "sha256": "ccfb41a29a8c9e56e34adf1668ca1c81708d8ad0a20dad5df820575dae24d120"
+  },
+  {
+    "path": "pipeline/runs/first-pass/crops/01_dog_eye_macro/eye_1.jpg",
+    "source_input": "pipeline/data/images/01_dog_eye_macro.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Dog_eye_makro.jpg",
+    "creator": "Christian Pietzsch",
+    "license": "CC BY-SA 4.0",
+    "transformation": "Rady detected-eye crop with 15% padding; JPEG re-encoding",
+    "sha256": "6bd19102054f51262be5fe94fd049fa38d47ff9937d6b20126d4752caf3a2ca1"
+  },
+  {
+    "path": "pipeline/runs/first-pass/crops/02_dalmatian_eye/eye_1.jpg",
+    "source_input": "pipeline/data/images/02_dalmatian_eye.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Oko_dalmaty%C5%84czyka.JPG",
+    "creator": "Olaf",
+    "license": "Public domain",
+    "transformation": "Rady detected-eye crop with 15% padding; JPEG re-encoding",
+    "sha256": "8b2e2204cb15e86025724d016c4d53fcdecf82b652463f4b292206a14b5c47c8"
+  },
+  {
+    "path": "pipeline/runs/first-pass/crops/02_dalmatian_eye/eye_2.jpg",
+    "source_input": "pipeline/data/images/02_dalmatian_eye.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Oko_dalmaty%C5%84czyka.JPG",
+    "creator": "Olaf",
+    "license": "Public domain",
+    "transformation": "Rady detected-eye crop with 15% padding; JPEG re-encoding",
+    "sha256": "3e6fa9730868547f3c9482f0571ee463621dae183111097e4a6efd28e164c2ba"
+  },
+  {
+    "path": "pipeline/runs/first-pass/crops/03_cataract_labrador/eye_1.jpg",
+    "source_input": "pipeline/data/images/03_cataract_labrador.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Cataract_in_labrador.jpg",
+    "creator": "Nithin1111991",
+    "license": "CC BY-SA 3.0",
+    "transformation": "Rady detected-eye crop with 15% padding; JPEG re-encoding",
+    "sha256": "3994c0b445986a06db034df242a62fbca9bd24f231bc776aaa06be98db754c55"
+  },
+  {
+    "path": "pipeline/runs/first-pass/crops/03_cataract_labrador/eye_2.jpg",
+    "source_input": "pipeline/data/images/03_cataract_labrador.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Cataract_in_labrador.jpg",
+    "creator": "Nithin1111991",
+    "license": "CC BY-SA 3.0",
+    "transformation": "Rady detected-eye crop with 15% padding; JPEG re-encoding",
+    "sha256": "059fba5a445273d24967adcb3cd6b8a6ce95a6bebe3af854413da506b4b1c37f"
+  },
+  {
+    "path": "pipeline/runs/first-pass/crops/04_cataract_dog/eye_1.jpg",
+    "source_input": "pipeline/data/images/04_cataract_dog.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:C%C3%A3o_com_catarata.jpg",
+    "creator": "Andre Koehne",
+    "license": "Public domain",
+    "transformation": "Rady detected-eye crop with 15% padding; JPEG re-encoding",
+    "sha256": "50a1144780c265ae583f5ea235ccbd700cd26e9f9666ee73e712b93640a90782"
+  },
+  {
+    "path": "pipeline/runs/first-pass/crops/04_cataract_dog/eye_2.jpg",
+    "source_input": "pipeline/data/images/04_cataract_dog.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:C%C3%A3o_com_catarata.jpg",
+    "creator": "Andre Koehne",
+    "license": "Public domain",
+    "transformation": "Rady detected-eye crop with 15% padding; JPEG re-encoding",
+    "sha256": "382c345af55937e6d5f7647d2c71063304b1eba0eb5aa4541e085b90638769fe"
+  },
+  {
+    "path": "pipeline/runs/first-pass/crops/07_affected_nictitating_membrane/eye_1.jpg",
+    "source_input": "pipeline/data/images/07_affected_nictitating_membrane.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Affected_nicitating_membrane.jpg",
+    "creator": "Edward Morgan",
+    "license": "CC BY-SA 2.0",
+    "transformation": "Rady detected-eye crop with 15% padding; JPEG re-encoding",
+    "sha256": "aaf6ad0c3f9e3280e16a520574c26c7ea5b85faf5cbe71e29d8a99bdbd7b3e31"
+  },
+  {
+    "path": "pipeline/runs/first-pass/crops/08_iris_coloboma/eye_1.jpg",
+    "source_input": "pipeline/data/images/08_iris_coloboma.png",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Left_iris_coloboma_in_border_collie.png",
+    "creator": "Timdwilliamson",
+    "license": "CC BY-SA 4.0",
+    "transformation": "Rady detected-eye crop with 15% padding; JPEG re-encoding",
+    "sha256": "75aff896ed557b0282383b9c1cfeb68b8fed3e115013a0a38fe54bd102688a34"
+  },
+  {
+    "path": "pipeline/runs/report/assets/boxes/01_dog_eye_macro_eye_1.jpg",
+    "source_input": "pipeline/data/images/01_dog_eye_macro.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Dog_eye_makro.jpg",
+    "creator": "Christian Pietzsch",
+    "license": "CC BY-SA 4.0",
+    "transformation": "Yellow detection-box annotation; JPEG re-encoding",
+    "sha256": "c2252c7f18acefb860e1a27c2a3746b457cac05c8f9a4c0e017a4b774bb5c22a"
+  },
+  {
+    "path": "pipeline/runs/report/assets/boxes/02_dalmatian_eye_eye_1.jpg",
+    "source_input": "pipeline/data/images/02_dalmatian_eye.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Oko_dalmaty%C5%84czyka.JPG",
+    "creator": "Olaf",
+    "license": "Public domain",
+    "transformation": "Yellow detection-box annotation; JPEG re-encoding",
+    "sha256": "61748e89e2a1758b5b24e51e942ad58e7a31c58219a9ea44e70547a87bad39b1"
+  },
+  {
+    "path": "pipeline/runs/report/assets/boxes/02_dalmatian_eye_eye_2.jpg",
+    "source_input": "pipeline/data/images/02_dalmatian_eye.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Oko_dalmaty%C5%84czyka.JPG",
+    "creator": "Olaf",
+    "license": "Public domain",
+    "transformation": "Yellow detection-box annotation; JPEG re-encoding",
+    "sha256": "59001402379b106cd0da3dadd441d78d9d4f37c02e65ca6611eaac835277edb3"
+  },
+  {
+    "path": "pipeline/runs/report/assets/boxes/03_cataract_labrador_eye_1.jpg",
+    "source_input": "pipeline/data/images/03_cataract_labrador.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Cataract_in_labrador.jpg",
+    "creator": "Nithin1111991",
+    "license": "CC BY-SA 3.0",
+    "transformation": "Yellow detection-box annotation; JPEG re-encoding",
+    "sha256": "43fb6b1266ca522fc38caab3fca2def53130bcddb734f37bc623438880a95c6d"
+  },
+  {
+    "path": "pipeline/runs/report/assets/boxes/03_cataract_labrador_eye_2.jpg",
+    "source_input": "pipeline/data/images/03_cataract_labrador.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Cataract_in_labrador.jpg",
+    "creator": "Nithin1111991",
+    "license": "CC BY-SA 3.0",
+    "transformation": "Yellow detection-box annotation; JPEG re-encoding",
+    "sha256": "09bb9df918d50825c16773695d4a39c6c3d72a17b7b202ed6486f8401c7e8d66"
+  },
+  {
+    "path": "pipeline/runs/report/assets/boxes/04_cataract_dog_eye_1.jpg",
+    "source_input": "pipeline/data/images/04_cataract_dog.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:C%C3%A3o_com_catarata.jpg",
+    "creator": "Andre Koehne",
+    "license": "Public domain",
+    "transformation": "Yellow detection-box annotation; JPEG re-encoding",
+    "sha256": "a1bf768df82efe4601372eb9fb1e06bbdd7f20d2d0841657a5236883e3f34adc"
+  },
+  {
+    "path": "pipeline/runs/report/assets/boxes/04_cataract_dog_eye_2.jpg",
+    "source_input": "pipeline/data/images/04_cataract_dog.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:C%C3%A3o_com_catarata.jpg",
+    "creator": "Andre Koehne",
+    "license": "Public domain",
+    "transformation": "Yellow detection-box annotation; JPEG re-encoding",
+    "sha256": "ae4e0ad866df4addad6ada75f9d976d15ff7183664987cfc163adb71a51c4744"
+  },
+  {
+    "path": "pipeline/runs/report/assets/boxes/07_affected_nictitating_membrane_eye_1.jpg",
+    "source_input": "pipeline/data/images/07_affected_nictitating_membrane.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Affected_nicitating_membrane.jpg",
+    "creator": "Edward Morgan",
+    "license": "CC BY-SA 2.0",
+    "transformation": "Yellow detection-box annotation; JPEG re-encoding",
+    "sha256": "1da6f44652bdbbb3b5f8051cebe5d8e1c41f78a1c26a9da965f94a5d1933e8d1"
+  },
+  {
+    "path": "pipeline/runs/report/assets/boxes/08_iris_coloboma_eye_1.jpg",
+    "source_input": "pipeline/data/images/08_iris_coloboma.png",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Left_iris_coloboma_in_border_collie.png",
+    "creator": "Timdwilliamson",
+    "license": "CC BY-SA 4.0",
+    "transformation": "Yellow detection-box annotation; JPEG re-encoding",
+    "sha256": "10f9ffca08582042f666cc124045280828e8681f290fde200df00ff84b29208b"
+  },
+  {
+    "path": "pipeline/runs/sam2/01_dog_eye_macro_eye_1_mask.png",
+    "source_input": "pipeline/data/images/01_dog_eye_macro.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Dog_eye_makro.jpg",
+    "creator": "Christian Pietzsch",
+    "license": "CC BY-SA 4.0",
+    "transformation": "SAM mask / colored overlay / transparent cutout as indicated by filename",
+    "sha256": "a39606b53b46fa3bfd427d20607961938b802cfae936582e5571b19edb2db158"
+  },
+  {
+    "path": "pipeline/runs/sam2/01_dog_eye_macro_eye_1_overlay.jpg",
+    "source_input": "pipeline/data/images/01_dog_eye_macro.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Dog_eye_makro.jpg",
+    "creator": "Christian Pietzsch",
+    "license": "CC BY-SA 4.0",
+    "transformation": "SAM mask / colored overlay / transparent cutout as indicated by filename",
+    "sha256": "9bb4c0ebd1342e076ef408275501cbc5962564577df6d954a1193b38484258a0"
+  },
+  {
+    "path": "pipeline/runs/sam2/01_dog_eye_macro_eye_1_segment.png",
+    "source_input": "pipeline/data/images/01_dog_eye_macro.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Dog_eye_makro.jpg",
+    "creator": "Christian Pietzsch",
+    "license": "CC BY-SA 4.0",
+    "transformation": "SAM mask / colored overlay / transparent cutout as indicated by filename",
+    "sha256": "aa326dd5c46fbc6a9470e0c4fde976b20463575db2c918494794ee415eef93d1"
+  },
+  {
+    "path": "pipeline/runs/sam2/02_dalmatian_eye_eye_1_mask.png",
+    "source_input": "pipeline/data/images/02_dalmatian_eye.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Oko_dalmaty%C5%84czyka.JPG",
+    "creator": "Olaf",
+    "license": "Public domain",
+    "transformation": "SAM mask / colored overlay / transparent cutout as indicated by filename",
+    "sha256": "6b2b96c8d7d45e35216605e9958297b3748b5bc1d6805d2e7ca77f1e6071e82e"
+  },
+  {
+    "path": "pipeline/runs/sam2/02_dalmatian_eye_eye_1_overlay.jpg",
+    "source_input": "pipeline/data/images/02_dalmatian_eye.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Oko_dalmaty%C5%84czyka.JPG",
+    "creator": "Olaf",
+    "license": "Public domain",
+    "transformation": "SAM mask / colored overlay / transparent cutout as indicated by filename",
+    "sha256": "0f5e8350f20dfb6fc71f61d6f6a5c6b7ebcc17d234f6dc69fd30fa332b7cb4da"
+  },
+  {
+    "path": "pipeline/runs/sam2/02_dalmatian_eye_eye_1_segment.png",
+    "source_input": "pipeline/data/images/02_dalmatian_eye.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Oko_dalmaty%C5%84czyka.JPG",
+    "creator": "Olaf",
+    "license": "Public domain",
+    "transformation": "SAM mask / colored overlay / transparent cutout as indicated by filename",
+    "sha256": "18af04955edff56fd7160622186ad78949bf3f8cf4c8f004390c81adec83df58"
+  },
+  {
+    "path": "pipeline/runs/sam2/02_dalmatian_eye_eye_2_mask.png",
+    "source_input": "pipeline/data/images/02_dalmatian_eye.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Oko_dalmaty%C5%84czyka.JPG",
+    "creator": "Olaf",
+    "license": "Public domain",
+    "transformation": "SAM mask / colored overlay / transparent cutout as indicated by filename",
+    "sha256": "9dde5b1806d27f1f268cd0f65d4108ff1186920857a8fad1850b8c216c4ea0b4"
+  },
+  {
+    "path": "pipeline/runs/sam2/02_dalmatian_eye_eye_2_overlay.jpg",
+    "source_input": "pipeline/data/images/02_dalmatian_eye.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Oko_dalmaty%C5%84czyka.JPG",
+    "creator": "Olaf",
+    "license": "Public domain",
+    "transformation": "SAM mask / colored overlay / transparent cutout as indicated by filename",
+    "sha256": "340c972d82415dcf6ae8e154a31dce1ecbe6b187c572e8d28ebe7445664f5123"
+  },
+  {
+    "path": "pipeline/runs/sam2/02_dalmatian_eye_eye_2_segment.png",
+    "source_input": "pipeline/data/images/02_dalmatian_eye.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Oko_dalmaty%C5%84czyka.JPG",
+    "creator": "Olaf",
+    "license": "Public domain",
+    "transformation": "SAM mask / colored overlay / transparent cutout as indicated by filename",
+    "sha256": "e92003046295309a0d16dbae6d831c7774e978af7f2ec9871dbb805746198b64"
+  },
+  {
+    "path": "pipeline/runs/sam2/03_cataract_labrador_eye_1_mask.png",
+    "source_input": "pipeline/data/images/03_cataract_labrador.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Cataract_in_labrador.jpg",
+    "creator": "Nithin1111991",
+    "license": "CC BY-SA 3.0",
+    "transformation": "SAM mask / colored overlay / transparent cutout as indicated by filename",
+    "sha256": "30579b1f5427c057c9cfc35587167cccd236f5a537ef8e76c2b1f2f591c25520"
+  },
+  {
+    "path": "pipeline/runs/sam2/03_cataract_labrador_eye_1_overlay.jpg",
+    "source_input": "pipeline/data/images/03_cataract_labrador.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Cataract_in_labrador.jpg",
+    "creator": "Nithin1111991",
+    "license": "CC BY-SA 3.0",
+    "transformation": "SAM mask / colored overlay / transparent cutout as indicated by filename",
+    "sha256": "aa8a59c5abfc1f54cb72252f10da463b3b7251ea6e2b22791a3b340339b7fbb8"
+  },
+  {
+    "path": "pipeline/runs/sam2/03_cataract_labrador_eye_1_segment.png",
+    "source_input": "pipeline/data/images/03_cataract_labrador.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Cataract_in_labrador.jpg",
+    "creator": "Nithin1111991",
+    "license": "CC BY-SA 3.0",
+    "transformation": "SAM mask / colored overlay / transparent cutout as indicated by filename",
+    "sha256": "dd31dd8a8dc06145b49a7c24c0d7f3a99b9d0db164d9de1cf93cee79dcc3d851"
+  },
+  {
+    "path": "pipeline/runs/sam2/03_cataract_labrador_eye_2_mask.png",
+    "source_input": "pipeline/data/images/03_cataract_labrador.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Cataract_in_labrador.jpg",
+    "creator": "Nithin1111991",
+    "license": "CC BY-SA 3.0",
+    "transformation": "SAM mask / colored overlay / transparent cutout as indicated by filename",
+    "sha256": "29d5a19af6e931c5929d48799af2b6f499aae81989f531941263ad04f84e1096"
+  },
+  {
+    "path": "pipeline/runs/sam2/03_cataract_labrador_eye_2_overlay.jpg",
+    "source_input": "pipeline/data/images/03_cataract_labrador.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Cataract_in_labrador.jpg",
+    "creator": "Nithin1111991",
+    "license": "CC BY-SA 3.0",
+    "transformation": "SAM mask / colored overlay / transparent cutout as indicated by filename",
+    "sha256": "921deeeacb1d30b64d8f1925f5b5e6586421045287acb263d618d18606d4f15d"
+  },
+  {
+    "path": "pipeline/runs/sam2/03_cataract_labrador_eye_2_segment.png",
+    "source_input": "pipeline/data/images/03_cataract_labrador.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Cataract_in_labrador.jpg",
+    "creator": "Nithin1111991",
+    "license": "CC BY-SA 3.0",
+    "transformation": "SAM mask / colored overlay / transparent cutout as indicated by filename",
+    "sha256": "e4a434abcd6f3681c73cc51ef300a71bd841d693685c107bf3fb5a7004d391e9"
+  },
+  {
+    "path": "pipeline/runs/sam2/04_cataract_dog_eye_1_mask.png",
+    "source_input": "pipeline/data/images/04_cataract_dog.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:C%C3%A3o_com_catarata.jpg",
+    "creator": "Andre Koehne",
+    "license": "Public domain",
+    "transformation": "SAM mask / colored overlay / transparent cutout as indicated by filename",
+    "sha256": "1c1827602a439f355eba44a9866f6edad1f047bc444d33c9e1ea76c6560247c8"
+  },
+  {
+    "path": "pipeline/runs/sam2/04_cataract_dog_eye_1_overlay.jpg",
+    "source_input": "pipeline/data/images/04_cataract_dog.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:C%C3%A3o_com_catarata.jpg",
+    "creator": "Andre Koehne",
+    "license": "Public domain",
+    "transformation": "SAM mask / colored overlay / transparent cutout as indicated by filename",
+    "sha256": "4cae32aee1f5ec6f34bcf937450c18b91771405a462297d52454643b8bbf6b18"
+  },
+  {
+    "path": "pipeline/runs/sam2/04_cataract_dog_eye_1_segment.png",
+    "source_input": "pipeline/data/images/04_cataract_dog.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:C%C3%A3o_com_catarata.jpg",
+    "creator": "Andre Koehne",
+    "license": "Public domain",
+    "transformation": "SAM mask / colored overlay / transparent cutout as indicated by filename",
+    "sha256": "f11d188325381c0bbba74913351607a404b11e68dfaad003ea3e3719c32c3db5"
+  },
+  {
+    "path": "pipeline/runs/sam2/04_cataract_dog_eye_2_mask.png",
+    "source_input": "pipeline/data/images/04_cataract_dog.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:C%C3%A3o_com_catarata.jpg",
+    "creator": "Andre Koehne",
+    "license": "Public domain",
+    "transformation": "SAM mask / colored overlay / transparent cutout as indicated by filename",
+    "sha256": "2e0703191551e047174a1017f4c2727240963d8950e2e0573802d088c267260f"
+  },
+  {
+    "path": "pipeline/runs/sam2/04_cataract_dog_eye_2_overlay.jpg",
+    "source_input": "pipeline/data/images/04_cataract_dog.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:C%C3%A3o_com_catarata.jpg",
+    "creator": "Andre Koehne",
+    "license": "Public domain",
+    "transformation": "SAM mask / colored overlay / transparent cutout as indicated by filename",
+    "sha256": "5d21b3a53f518207934487fb508e1f0fdcc5caa1168a5148efbdfa39e17413b4"
+  },
+  {
+    "path": "pipeline/runs/sam2/04_cataract_dog_eye_2_segment.png",
+    "source_input": "pipeline/data/images/04_cataract_dog.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:C%C3%A3o_com_catarata.jpg",
+    "creator": "Andre Koehne",
+    "license": "Public domain",
+    "transformation": "SAM mask / colored overlay / transparent cutout as indicated by filename",
+    "sha256": "eb70543f89493ab1fde6e1fe6073aa8d3993027973b075462167569d340eeb2f"
+  },
+  {
+    "path": "pipeline/runs/sam2/05_cherry_eye_eye_1_mask.png",
+    "source_input": "pipeline/data/images/05_cherry_eye.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Beagle%E2%80%93Cocker_Spaniel_Mix_with_cherry_eye.jpg",
+    "creator": "Tcr25",
+    "license": "CC BY-SA 4.0",
+    "transformation": "SAM mask / colored overlay / transparent cutout as indicated by filename",
+    "sha256": "7d28ca9d168e97aba2d8e523abf4b3fcf5d2b5218399ae925018fb61d1f7fbed"
+  },
+  {
+    "path": "pipeline/runs/sam2/05_cherry_eye_eye_1_overlay.jpg",
+    "source_input": "pipeline/data/images/05_cherry_eye.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Beagle%E2%80%93Cocker_Spaniel_Mix_with_cherry_eye.jpg",
+    "creator": "Tcr25",
+    "license": "CC BY-SA 4.0",
+    "transformation": "SAM mask / colored overlay / transparent cutout as indicated by filename",
+    "sha256": "a677cd728a2d14b203621b588ce4cbb806140e1395dc3587f9f12a032884370b"
+  },
+  {
+    "path": "pipeline/runs/sam2/05_cherry_eye_eye_1_segment.png",
+    "source_input": "pipeline/data/images/05_cherry_eye.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Beagle%E2%80%93Cocker_Spaniel_Mix_with_cherry_eye.jpg",
+    "creator": "Tcr25",
+    "license": "CC BY-SA 4.0",
+    "transformation": "SAM mask / colored overlay / transparent cutout as indicated by filename",
+    "sha256": "b368872a810d5cf329e945155a14fabdf225e75136864ac0e18a851206dde5a2"
+  },
+  {
+    "path": "pipeline/runs/sam2/06_prolapsed_third_eyelid_eye_1_mask.png",
+    "source_input": "pipeline/data/images/06_prolapsed_third_eyelid.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Prolapsed_gland_of_the_third_eyelid.JPG",
+    "creator": "Joel Mills",
+    "license": "CC BY-SA 3.0",
+    "transformation": "SAM mask / colored overlay / transparent cutout as indicated by filename",
+    "sha256": "c666df50b7311ab5df696a8478cef3738ba6b18d168502327acb1d3a2cc99359"
+  },
+  {
+    "path": "pipeline/runs/sam2/06_prolapsed_third_eyelid_eye_1_overlay.jpg",
+    "source_input": "pipeline/data/images/06_prolapsed_third_eyelid.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Prolapsed_gland_of_the_third_eyelid.JPG",
+    "creator": "Joel Mills",
+    "license": "CC BY-SA 3.0",
+    "transformation": "SAM mask / colored overlay / transparent cutout as indicated by filename",
+    "sha256": "14480a24628ba0b8130daf0751d483804a274b3a08484205bc92febf72efb243"
+  },
+  {
+    "path": "pipeline/runs/sam2/06_prolapsed_third_eyelid_eye_1_segment.png",
+    "source_input": "pipeline/data/images/06_prolapsed_third_eyelid.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Prolapsed_gland_of_the_third_eyelid.JPG",
+    "creator": "Joel Mills",
+    "license": "CC BY-SA 3.0",
+    "transformation": "SAM mask / colored overlay / transparent cutout as indicated by filename",
+    "sha256": "3fcc77feb92b9c74a7b710801a1f902b77ccc7550112aa797a8149a8bb884e19"
+  },
+  {
+    "path": "pipeline/runs/sam2/07_affected_nictitating_membrane_eye_1_mask.png",
+    "source_input": "pipeline/data/images/07_affected_nictitating_membrane.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Affected_nicitating_membrane.jpg",
+    "creator": "Edward Morgan",
+    "license": "CC BY-SA 2.0",
+    "transformation": "SAM mask / colored overlay / transparent cutout as indicated by filename",
+    "sha256": "cc911366953781f1cd29578772c7c9a8540b30a6f80a4db965cbd72e92dd3a0c"
+  },
+  {
+    "path": "pipeline/runs/sam2/07_affected_nictitating_membrane_eye_1_overlay.jpg",
+    "source_input": "pipeline/data/images/07_affected_nictitating_membrane.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Affected_nicitating_membrane.jpg",
+    "creator": "Edward Morgan",
+    "license": "CC BY-SA 2.0",
+    "transformation": "SAM mask / colored overlay / transparent cutout as indicated by filename",
+    "sha256": "57292bf778d46d84263377786258bea80d43480ffca8d0045f342aacd76891a7"
+  },
+  {
+    "path": "pipeline/runs/sam2/07_affected_nictitating_membrane_eye_1_segment.png",
+    "source_input": "pipeline/data/images/07_affected_nictitating_membrane.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Affected_nicitating_membrane.jpg",
+    "creator": "Edward Morgan",
+    "license": "CC BY-SA 2.0",
+    "transformation": "SAM mask / colored overlay / transparent cutout as indicated by filename",
+    "sha256": "1ed9a449559da460bab24ab38749f614aae69bb8f8509a48d5045913b1799915"
+  },
+  {
+    "path": "pipeline/runs/sam2/08_iris_coloboma_eye_1_mask.png",
+    "source_input": "pipeline/data/images/08_iris_coloboma.png",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Left_iris_coloboma_in_border_collie.png",
+    "creator": "Timdwilliamson",
+    "license": "CC BY-SA 4.0",
+    "transformation": "SAM mask / colored overlay / transparent cutout as indicated by filename",
+    "sha256": "ce5f7111efe4cab40ec4171cd5627fd6674c17ace1b71a30aacefa5f678dacdf"
+  },
+  {
+    "path": "pipeline/runs/sam2/08_iris_coloboma_eye_1_overlay.jpg",
+    "source_input": "pipeline/data/images/08_iris_coloboma.png",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Left_iris_coloboma_in_border_collie.png",
+    "creator": "Timdwilliamson",
+    "license": "CC BY-SA 4.0",
+    "transformation": "SAM mask / colored overlay / transparent cutout as indicated by filename",
+    "sha256": "a658ba504b5709eed5bce00c9cb09f5671abba48f9115de8656de3f0120f311c"
+  },
+  {
+    "path": "pipeline/runs/sam2/08_iris_coloboma_eye_1_segment.png",
+    "source_input": "pipeline/data/images/08_iris_coloboma.png",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Left_iris_coloboma_in_border_collie.png",
+    "creator": "Timdwilliamson",
+    "license": "CC BY-SA 4.0",
+    "transformation": "SAM mask / colored overlay / transparent cutout as indicated by filename",
+    "sha256": "1b4be6f242bfe8bbd31823b46cd2a246c9b702afa53185f0cee26ed8c5f0bf8f"
+  },
+  {
+    "path": "pipeline/runs/targeted-sam/02_dark_eye_masks.png",
+    "source_input": "pipeline/data/images/02_dalmatian_eye.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Oko_dalmaty%C5%84czyka.JPG",
+    "creator": "Olaf",
+    "license": "Public domain",
+    "transformation": "Manual prompt diagram / pupil-iris overlay / mask diagram as indicated by filename",
+    "sha256": "adc36a62317eae8fe07fbccca6fea529b1d003db00cdd4701a8cc96cd12e8d56"
+  },
+  {
+    "path": "pipeline/runs/targeted-sam/02_dark_eye_overlay.jpg",
+    "source_input": "pipeline/data/images/02_dalmatian_eye.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Oko_dalmaty%C5%84czyka.JPG",
+    "creator": "Olaf",
+    "license": "Public domain",
+    "transformation": "Manual prompt diagram / pupil-iris overlay / mask diagram as indicated by filename",
+    "sha256": "83c3b7589ef9ba1b136a84d1e47dff67e321dfb88240bf1d5b14d73b059e5c55"
+  },
+  {
+    "path": "pipeline/runs/targeted-sam/02_dark_eye_prompts.jpg",
+    "source_input": "pipeline/data/images/02_dalmatian_eye.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Oko_dalmaty%C5%84czyka.JPG",
+    "creator": "Olaf",
+    "license": "Public domain",
+    "transformation": "Manual prompt diagram / pupil-iris overlay / mask diagram as indicated by filename",
+    "sha256": "1c0990d060a76b294341431d4370e310a30cd055f7c54506a22be9b9e300ba34"
+  },
+  {
+    "path": "pipeline/runs/targeted-sam/08_left_eye_masks.png",
+    "source_input": "pipeline/data/images/08_iris_coloboma.png",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Left_iris_coloboma_in_border_collie.png",
+    "creator": "Timdwilliamson",
+    "license": "CC BY-SA 4.0",
+    "transformation": "Manual prompt diagram / pupil-iris overlay / mask diagram as indicated by filename",
+    "sha256": "637c77d7456ab57d1d7b5a9a3ada9aef38a72f7dd4c27c82d2c2db8b89b5c3d3"
+  },
+  {
+    "path": "pipeline/runs/targeted-sam/08_left_eye_overlay.jpg",
+    "source_input": "pipeline/data/images/08_iris_coloboma.png",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Left_iris_coloboma_in_border_collie.png",
+    "creator": "Timdwilliamson",
+    "license": "CC BY-SA 4.0",
+    "transformation": "Manual prompt diagram / pupil-iris overlay / mask diagram as indicated by filename",
+    "sha256": "56557fff1ebf923a59866fd1e21429ee1cc4f9ed98c202de79b6c96fa09fe05e"
+  },
+  {
+    "path": "pipeline/runs/targeted-sam/08_left_eye_prompts.jpg",
+    "source_input": "pipeline/data/images/08_iris_coloboma.png",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Left_iris_coloboma_in_border_collie.png",
+    "creator": "Timdwilliamson",
+    "license": "CC BY-SA 4.0",
+    "transformation": "Manual prompt diagram / pupil-iris overlay / mask diagram as indicated by filename",
+    "sha256": "ed1fcd8f9f020d32efa83b898f3b4e1c81eac4f0774674e74c3f0c3b8a8b731a"
+  },
+  {
+    "path": "pipeline/runs/targeted-sam/08_right_eye_masks.png",
+    "source_input": "pipeline/data/images/08_iris_coloboma.png",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Left_iris_coloboma_in_border_collie.png",
+    "creator": "Timdwilliamson",
+    "license": "CC BY-SA 4.0",
+    "transformation": "Manual prompt diagram / pupil-iris overlay / mask diagram as indicated by filename",
+    "sha256": "cec352e08cbec494b2eb3874ec1246d1f40aeb6219dd9db64593842acf980daf"
+  },
+  {
+    "path": "pipeline/runs/targeted-sam/08_right_eye_overlay.jpg",
+    "source_input": "pipeline/data/images/08_iris_coloboma.png",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Left_iris_coloboma_in_border_collie.png",
+    "creator": "Timdwilliamson",
+    "license": "CC BY-SA 4.0",
+    "transformation": "Manual prompt diagram / pupil-iris overlay / mask diagram as indicated by filename",
+    "sha256": "b54b733e3174e51d1f7254d131ac85e5e163ce118456aee9051e93e56f034718"
+  },
+  {
+    "path": "pipeline/runs/targeted-sam/08_right_eye_prompts.jpg",
+    "source_input": "pipeline/data/images/08_iris_coloboma.png",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Left_iris_coloboma_in_border_collie.png",
+    "creator": "Timdwilliamson",
+    "license": "CC BY-SA 4.0",
+    "transformation": "Manual prompt diagram / pupil-iris overlay / mask diagram as indicated by filename",
+    "sha256": "afbcb431e518b25b434b13bee5c75b389d1583d3b92eaa83c48533ab58181e74"
+  }
+]

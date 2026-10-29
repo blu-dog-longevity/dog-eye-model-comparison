@@ -1,0 +1,668 @@
+[
+  {
+    "image": "01_dog_eye_macro.jpg",
+    "eye": 1,
+    "model": "rady4",
+    "status": "ok",
+    "crop": "crops/01_dog_eye_macro/eye_1.jpg",
+    "box": [
+      477.06719970703125,
+      136.78546142578125,
+      1780.3846435546875,
+      1235.9130859375
+    ],
+    "detection_score": 0.829767644405365,
+    "prediction": "Iris_atrophy",
+    "score": 0.6284374594688416,
+    "scores": {
+      "Cataract": 0.1562623381614685,
+      "Cherry_eye": 0.0903448760509491,
+      "Iris_atrophy": 0.6284374594688416,
+      "Healthy": 0.12495533376932144
+    }
+  },
+  {
+    "image": "02_dalmatian_eye.jpg",
+    "eye": 1,
+    "model": "rady4",
+    "status": "ok",
+    "crop": "crops/02_dalmatian_eye/eye_1.jpg",
+    "box": [
+      1.714599609375,
+      4.854705810546875,
+      608.2295532226562,
+      471.3559875488281
+    ],
+    "detection_score": 0.6608495116233826,
+    "prediction": "Healthy",
+    "score": 0.9297378659248352,
+    "scores": {
+      "Cataract": 0.017230302095413208,
+      "Cherry_eye": 0.0175514817237854,
+      "Iris_atrophy": 0.03548033908009529,
+      "Healthy": 0.9297378659248352
+    }
+  },
+  {
+    "image": "02_dalmatian_eye.jpg",
+    "eye": 2,
+    "model": "rady4",
+    "status": "ok",
+    "crop": "crops/02_dalmatian_eye/eye_2.jpg",
+    "box": [
+      5.7974853515625,
+      10.959014892578125,
+      517.6636352539062,
+      373.977294921875
+    ],
+    "detection_score": 0.47042810916900635,
+    "prediction": "Healthy",
+    "score": 0.9272110462188721,
+    "scores": {
+      "Cataract": 0.017381276935338974,
+      "Cherry_eye": 0.01775505766272545,
+      "Iris_atrophy": 0.0376526340842247,
+      "Healthy": 0.9272110462188721
+    }
+  },
+  {
+    "image": "03_cataract_labrador.jpg",
+    "eye": 1,
+    "model": "rady4",
+    "status": "ok",
+    "crop": "crops/03_cataract_labrador/eye_1.jpg",
+    "box": [
+      152.67674255371094,
+      62.57518005371094,
+      186.8415985107422,
+      100.14494323730469
+    ],
+    "detection_score": 0.8634594678878784,
+    "prediction": "Cataract",
+    "score": 0.8722612261772156,
+    "scores": {
+      "Cataract": 0.8722612261772156,
+      "Cherry_eye": 0.07301201671361923,
+      "Iris_atrophy": 0.01767447032034397,
+      "Healthy": 0.037052154541015625
+    }
+  },
+  {
+    "image": "03_cataract_labrador.jpg",
+    "eye": 2,
+    "model": "rady4",
+    "status": "ok",
+    "crop": "crops/03_cataract_labrador/eye_2.jpg",
+    "box": [
+      243.904296875,
+      130.53334045410156,
+      292.624755859375,
+      174.143310546875
+    ],
+    "detection_score": 0.8279065489768982,
+    "prediction": "Cherry_eye",
+    "score": 0.4612961709499359,
+    "scores": {
+      "Cataract": 0.29646605253219604,
+      "Cherry_eye": 0.4612961709499359,
+      "Iris_atrophy": 0.0591406412422657,
+      "Healthy": 0.18309716880321503
+    }
+  },
+  {
+    "image": "04_cataract_dog.jpg",
+    "eye": 1,
+    "model": "rady4",
+    "status": "ok",
+    "crop": "crops/04_cataract_dog/eye_1.jpg",
+    "box": [
+      878.9091796875,
+      402.6107482910156,
+      1047.125732421875,
+      526.8756713867188
+    ],
+    "detection_score": 0.854756772518158,
+    "prediction": "Cataract",
+    "score": 0.9652765989303589,
+    "scores": {
+      "Cataract": 0.9652765989303589,
+      "Cherry_eye": 0.017468677833676338,
+      "Iris_atrophy": 0.012369810603559017,
+      "Healthy": 0.0048849680460989475
+    }
+  },
+  {
+    "image": "04_cataract_dog.jpg",
+    "eye": 2,
+    "model": "rady4",
+    "status": "ok",
+    "crop": "crops/04_cataract_dog/eye_2.jpg",
+    "box": [
+      536.989501953125,
+      643.197265625,
+      788.846923828125,
+      858.230712890625
+    ],
+    "detection_score": 0.39204055070877075,
+    "prediction": "Healthy",
+    "score": 0.6965699791908264,
+    "scores": {
+      "Cataract": 0.06748918443918228,
+      "Cherry_eye": 0.1157643124461174,
+      "Iris_atrophy": 0.12017646431922913,
+      "Healthy": 0.6965699791908264
+    }
+  },
+  {
+    "image": "05_cherry_eye.jpg",
+    "model": "rady4",
+    "status": "no_eye_detected"
+  },
+  {
+    "image": "06_prolapsed_third_eyelid.jpg",
+    "model": "rady4",
+    "status": "no_eye_detected"
+  },
+  {
+    "image": "07_affected_nictitating_membrane.jpg",
+    "eye": 1,
+    "model": "rady4",
+    "status": "ok",
+    "crop": "crops/07_affected_nictitating_membrane/eye_1.jpg",
+    "box": [
+      716.0126342773438,
+      770.0230712890625,
+      1021.7098999023438,
+      1009.0281982421875
+    ],
+    "detection_score": 0.8764006495475769,
+    "prediction": "Cherry_eye",
+    "score": 0.9236026406288147,
+    "scores": {
+      "Cataract": 0.032288480550050735,
+      "Cherry_eye": 0.9236026406288147,
+      "Iris_atrophy": 0.025956803932785988,
+      "Healthy": 0.01815207116305828
+    }
+  },
+  {
+    "image": "08_iris_coloboma.png",
+    "eye": 1,
+    "model": "rady4",
+    "status": "ok",
+    "crop": "crops/08_iris_coloboma/eye_1.jpg",
+    "box": [
+      132.03079223632812,
+      149.58688354492188,
+      399.3998107910156,
+      435.56573486328125
+    ],
+    "detection_score": 0.7580507397651672,
+    "prediction": "Healthy",
+    "score": 0.7147442698478699,
+    "scores": {
+      "Cataract": 0.06797709316015244,
+      "Cherry_eye": 0.12356405705213547,
+      "Iris_atrophy": 0.09371460229158401,
+      "Healthy": 0.7147442698478699
+    }
+  },
+  {
+    "image": "01_dog_eye_macro.jpg",
+    "eye": 1,
+    "model": "rady6",
+    "status": "ok",
+    "crop": "crops/01_dog_eye_macro/eye_1.jpg",
+    "box": [
+      477.06719970703125,
+      136.78546142578125,
+      1780.3846435546875,
+      1235.9130859375
+    ],
+    "detection_score": 0.829767644405365,
+    "prediction": "Conjunctivitis",
+    "score": 0.5269960165023804,
+    "scores": {
+      "Cataract": 0.05769765377044678,
+      "Cherry_eye": 0.09302397072315216,
+      "Conjunctivitis": 0.5269960165023804,
+      "Glaucoma": 0.041275884956121445,
+      "Healthy": 0.089158795773983,
+      "Iris_atrophy": 0.19184760749340057
+    }
+  },
+  {
+    "image": "02_dalmatian_eye.jpg",
+    "eye": 1,
+    "model": "rady6",
+    "status": "ok",
+    "crop": "crops/02_dalmatian_eye/eye_1.jpg",
+    "box": [
+      1.714599609375,
+      4.854705810546875,
+      608.2295532226562,
+      471.3559875488281
+    ],
+    "detection_score": 0.6608495116233826,
+    "prediction": "Healthy",
+    "score": 0.8662283420562744,
+    "scores": {
+      "Cataract": 0.034483104944229126,
+      "Cherry_eye": 0.030356870964169502,
+      "Conjunctivitis": 0.019594203680753708,
+      "Glaucoma": 0.02373305894434452,
+      "Healthy": 0.8662283420562744,
+      "Iris_atrophy": 0.025604402646422386
+    }
+  },
+  {
+    "image": "02_dalmatian_eye.jpg",
+    "eye": 2,
+    "model": "rady6",
+    "status": "ok",
+    "crop": "crops/02_dalmatian_eye/eye_2.jpg",
+    "box": [
+      5.7974853515625,
+      10.959014892578125,
+      517.6636352539062,
+      373.977294921875
+    ],
+    "detection_score": 0.47042810916900635,
+    "prediction": "Healthy",
+    "score": 0.8830099701881409,
+    "scores": {
+      "Cataract": 0.029114829376339912,
+      "Cherry_eye": 0.027009977027773857,
+      "Conjunctivitis": 0.018154388293623924,
+      "Glaucoma": 0.01995588280260563,
+      "Healthy": 0.8830099701881409,
+      "Iris_atrophy": 0.022754888981580734
+    }
+  },
+  {
+    "image": "03_cataract_labrador.jpg",
+    "eye": 1,
+    "model": "rady6",
+    "status": "ok",
+    "crop": "crops/03_cataract_labrador/eye_1.jpg",
+    "box": [
+      152.67674255371094,
+      62.57518005371094,
+      186.8415985107422,
+      100.14494323730469
+    ],
+    "detection_score": 0.8634594678878784,
+    "prediction": "Cataract",
+    "score": 0.6434810161590576,
+    "scores": {
+      "Cataract": 0.6434810161590576,
+      "Cherry_eye": 0.051366519182920456,
+      "Conjunctivitis": 0.013251373544335365,
+      "Glaucoma": 0.027713242918252945,
+      "Healthy": 0.022174714133143425,
+      "Iris_atrophy": 0.2420131415128708
+    }
+  },
+  {
+    "image": "03_cataract_labrador.jpg",
+    "eye": 2,
+    "model": "rady6",
+    "status": "ok",
+    "crop": "crops/03_cataract_labrador/eye_2.jpg",
+    "box": [
+      243.904296875,
+      130.53334045410156,
+      292.624755859375,
+      174.143310546875
+    ],
+    "detection_score": 0.8279065489768982,
+    "prediction": "Glaucoma",
+    "score": 0.4420313239097595,
+    "scores": {
+      "Cataract": 0.06348070502281189,
+      "Cherry_eye": 0.04587436467409134,
+      "Conjunctivitis": 0.0166524276137352,
+      "Glaucoma": 0.4420313239097595,
+      "Healthy": 0.09289803355932236,
+      "Iris_atrophy": 0.3390630781650543
+    }
+  },
+  {
+    "image": "04_cataract_dog.jpg",
+    "eye": 1,
+    "model": "rady6",
+    "status": "ok",
+    "crop": "crops/04_cataract_dog/eye_1.jpg",
+    "box": [
+      878.9091796875,
+      402.6107482910156,
+      1047.125732421875,
+      526.8756713867188
+    ],
+    "detection_score": 0.854756772518158,
+    "prediction": "Cataract",
+    "score": 0.850116491317749,
+    "scores": {
+      "Cataract": 0.850116491317749,
+      "Cherry_eye": 0.04275461286306381,
+      "Conjunctivitis": 0.01076878234744072,
+      "Glaucoma": 0.049299340695142746,
+      "Healthy": 0.008855979889631271,
+      "Iris_atrophy": 0.038204826414585114
+    }
+  },
+  {
+    "image": "04_cataract_dog.jpg",
+    "eye": 2,
+    "model": "rady6",
+    "status": "ok",
+    "crop": "crops/04_cataract_dog/eye_2.jpg",
+    "box": [
+      536.989501953125,
+      643.197265625,
+      788.846923828125,
+      858.230712890625
+    ],
+    "detection_score": 0.39204055070877075,
+    "prediction": "Conjunctivitis",
+    "score": 0.2768325209617615,
+    "scores": {
+      "Cataract": 0.1901780515909195,
+      "Cherry_eye": 0.12022125720977783,
+      "Conjunctivitis": 0.2768325209617615,
+      "Glaucoma": 0.03672938048839569,
+      "Healthy": 0.2710625231266022,
+      "Iris_atrophy": 0.10497630387544632
+    }
+  },
+  {
+    "image": "05_cherry_eye.jpg",
+    "model": "rady6",
+    "status": "no_eye_detected"
+  },
+  {
+    "image": "06_prolapsed_third_eyelid.jpg",
+    "model": "rady6",
+    "status": "no_eye_detected"
+  },
+  {
+    "image": "07_affected_nictitating_membrane.jpg",
+    "eye": 1,
+    "model": "rady6",
+    "status": "ok",
+    "crop": "crops/07_affected_nictitating_membrane/eye_1.jpg",
+    "box": [
+      716.0126342773438,
+      770.0230712890625,
+      1021.7098999023438,
+      1009.0281982421875
+    ],
+    "detection_score": 0.8764006495475769,
+    "prediction": "Cherry_eye",
+    "score": 0.8889635801315308,
+    "scores": {
+      "Cataract": 0.012944548390805721,
+      "Cherry_eye": 0.8889635801315308,
+      "Conjunctivitis": 0.021628571674227715,
+      "Glaucoma": 0.05475429445505142,
+      "Healthy": 0.010760743170976639,
+      "Iris_atrophy": 0.010948117822408676
+    }
+  },
+  {
+    "image": "08_iris_coloboma.png",
+    "eye": 1,
+    "model": "rady6",
+    "status": "ok",
+    "crop": "crops/08_iris_coloboma/eye_1.jpg",
+    "box": [
+      132.03079223632812,
+      149.58688354492188,
+      399.3998107910156,
+      435.56573486328125
+    ],
+    "detection_score": 0.7580507397651672,
+    "prediction": "Healthy",
+    "score": 0.8236778378486633,
+    "scores": {
+      "Cataract": 0.07671421021223068,
+      "Cherry_eye": 0.03171577304601669,
+      "Conjunctivitis": 0.01755967177450657,
+      "Glaucoma": 0.025979384779930115,
+      "Healthy": 0.8236778378486633,
+      "Iris_atrophy": 0.024353094398975372
+    }
+  },
+  {
+    "image": "01_dog_eye_macro.jpg",
+    "model": "dog_disease_predictor",
+    "status": "ok",
+    "prediction": "Ear infections",
+    "score": 0.06142384186387062,
+    "scores": {
+      "Acral Lick Dermatitis": 0.061415791511535645,
+      "Acute moist dermatitis": 0.05566810071468353,
+      "Canine atopic dermatitis": 0.04250270873308182,
+      "Cherry Eye": 0.05969571694731712,
+      "Ear infections": 0.06142384186387062,
+      "External Parasites": 0.046258002519607544,
+      "Folliculitis": 0.04518017917871475,
+      "Healthy": 0.05198901891708374,
+      "Leishmaniasis": 0.03448999673128128,
+      "Lupus": 0.05032744258642197,
+      "Nuclear sclerosis": 0.050038132816553116,
+      "Otitis externa": 0.04809260740876198,
+      "Pruritus": 0.040103767067193985,
+      "Pyoderma": 0.04769403859972954,
+      "Rabies": 0.04676078259944916,
+      "Ringworm": 0.05855245515704155,
+      "Sarcoptic Mange": 0.04612920060753822,
+      "Sebaceous adenitis": 0.049810655415058136,
+      "Seborrhea": 0.053407493978738785,
+      "Skin tumor": 0.050460025668144226
+    }
+  },
+  {
+    "image": "02_dalmatian_eye.jpg",
+    "model": "dog_disease_predictor",
+    "status": "ok",
+    "prediction": "Ear infections",
+    "score": 0.0671190470457077,
+    "scores": {
+      "Acral Lick Dermatitis": 0.059682417660951614,
+      "Acute moist dermatitis": 0.057450756430625916,
+      "Canine atopic dermatitis": 0.045007556676864624,
+      "Cherry Eye": 0.05725831910967827,
+      "Ear infections": 0.0671190470457077,
+      "External Parasites": 0.04773273319005966,
+      "Folliculitis": 0.044653262943029404,
+      "Healthy": 0.04772690311074257,
+      "Leishmaniasis": 0.03461303561925888,
+      "Lupus": 0.04769599065184593,
+      "Nuclear sclerosis": 0.04722652584314346,
+      "Otitis externa": 0.046459976583719254,
+      "Pruritus": 0.042868178337812424,
+      "Pyoderma": 0.048783089965581894,
+      "Rabies": 0.04600492864847183,
+      "Ringworm": 0.05538173019886017,
+      "Sarcoptic Mange": 0.04681648686528206,
+      "Sebaceous adenitis": 0.05270981043577194,
+      "Seborrhea": 0.05804231017827988,
+      "Skin tumor": 0.04676690697669983
+    }
+  },
+  {
+    "image": "03_cataract_labrador.jpg",
+    "model": "dog_disease_predictor",
+    "status": "ok",
+    "prediction": "Ear infections",
+    "score": 0.06638763099908829,
+    "scores": {
+      "Acral Lick Dermatitis": 0.061080384999513626,
+      "Acute moist dermatitis": 0.05772741511464119,
+      "Canine atopic dermatitis": 0.0438874326646328,
+      "Cherry Eye": 0.06570009887218475,
+      "Ear infections": 0.06638763099908829,
+      "External Parasites": 0.04818443953990936,
+      "Folliculitis": 0.04623829945921898,
+      "Healthy": 0.04501282796263695,
+      "Leishmaniasis": 0.0350821278989315,
+      "Lupus": 0.04574746638536453,
+      "Nuclear sclerosis": 0.04964803159236908,
+      "Otitis externa": 0.04192770645022392,
+      "Pruritus": 0.04549891874194145,
+      "Pyoderma": 0.04199599847197533,
+      "Rabies": 0.045427992939949036,
+      "Ringworm": 0.05148865282535553,
+      "Sarcoptic Mange": 0.04730600491166115,
+      "Sebaceous adenitis": 0.055147357285022736,
+      "Seborrhea": 0.05837699770927429,
+      "Skin tumor": 0.0481342114508152
+    }
+  },
+  {
+    "image": "04_cataract_dog.jpg",
+    "model": "dog_disease_predictor",
+    "status": "ok",
+    "prediction": "Ear infections",
+    "score": 0.06518034636974335,
+    "scores": {
+      "Acral Lick Dermatitis": 0.06222526729106903,
+      "Acute moist dermatitis": 0.05478837713599205,
+      "Canine atopic dermatitis": 0.042943306267261505,
+      "Cherry Eye": 0.05640393868088722,
+      "Ear infections": 0.06518034636974335,
+      "External Parasites": 0.04559663310647011,
+      "Folliculitis": 0.045764703303575516,
+      "Healthy": 0.049197882413864136,
+      "Leishmaniasis": 0.034728482365608215,
+      "Lupus": 0.05039985477924347,
+      "Nuclear sclerosis": 0.048027005046606064,
+      "Otitis externa": 0.04584427922964096,
+      "Pruritus": 0.042877111583948135,
+      "Pyoderma": 0.04726593941450119,
+      "Rabies": 0.046277984976768494,
+      "Ringworm": 0.05998249351978302,
+      "Sarcoptic Mange": 0.04557415843009949,
+      "Sebaceous adenitis": 0.04854505509138107,
+      "Seborrhea": 0.05808199197053909,
+      "Skin tumor": 0.050295230001211166
+    }
+  },
+  {
+    "image": "05_cherry_eye.jpg",
+    "model": "dog_disease_predictor",
+    "status": "ok",
+    "prediction": "Acral Lick Dermatitis",
+    "score": 0.06353770196437836,
+    "scores": {
+      "Acral Lick Dermatitis": 0.06353770196437836,
+      "Acute moist dermatitis": 0.05810854211449623,
+      "Canine atopic dermatitis": 0.04262489452958107,
+      "Cherry Eye": 0.05728106200695038,
+      "Ear infections": 0.06340064108371735,
+      "External Parasites": 0.04721922054886818,
+      "Folliculitis": 0.044368959963321686,
+      "Healthy": 0.05284778028726578,
+      "Leishmaniasis": 0.03739245608448982,
+      "Lupus": 0.047469835728406906,
+      "Nuclear sclerosis": 0.04613305628299713,
+      "Otitis externa": 0.04860127344727516,
+      "Pruritus": 0.041295625269412994,
+      "Pyoderma": 0.04709966108202934,
+      "Rabies": 0.04477517679333687,
+      "Ringworm": 0.058124277740716934,
+      "Sarcoptic Mange": 0.0463729090988636,
+      "Sebaceous adenitis": 0.050074826925992966,
+      "Seborrhea": 0.055472590029239655,
+      "Skin tumor": 0.04779957979917526
+    }
+  },
+  {
+    "image": "06_prolapsed_third_eyelid.jpg",
+    "model": "dog_disease_predictor",
+    "status": "ok",
+    "prediction": "Ear infections",
+    "score": 0.06846041232347488,
+    "scores": {
+      "Acral Lick Dermatitis": 0.06391594558954239,
+      "Acute moist dermatitis": 0.05585407465696335,
+      "Canine atopic dermatitis": 0.046108655631542206,
+      "Cherry Eye": 0.05683482810854912,
+      "Ear infections": 0.06846041232347488,
+      "External Parasites": 0.04792878031730652,
+      "Folliculitis": 0.04756264016032219,
+      "Healthy": 0.04764232411980629,
+      "Leishmaniasis": 0.03486684337258339,
+      "Lupus": 0.04507628083229065,
+      "Nuclear sclerosis": 0.04586939513683319,
+      "Otitis externa": 0.04644098877906799,
+      "Pruritus": 0.04353904724121094,
+      "Pyoderma": 0.04524875059723854,
+      "Rabies": 0.04556692764163017,
+      "Ringworm": 0.05597885698080063,
+      "Sarcoptic Mange": 0.04589337855577469,
+      "Sebaceous adenitis": 0.051428116858005524,
+      "Seborrhea": 0.05849470570683479,
+      "Skin tumor": 0.04728896543383598
+    }
+  },
+  {
+    "image": "07_affected_nictitating_membrane.jpg",
+    "model": "dog_disease_predictor",
+    "status": "ok",
+    "prediction": "Ear infections",
+    "score": 0.06094088405370712,
+    "scores": {
+      "Acral Lick Dermatitis": 0.054380856454372406,
+      "Acute moist dermatitis": 0.058464519679546356,
+      "Canine atopic dermatitis": 0.0485280379652977,
+      "Cherry Eye": 0.05856972187757492,
+      "Ear infections": 0.06094088405370712,
+      "External Parasites": 0.047374457120895386,
+      "Folliculitis": 0.046525850892066956,
+      "Healthy": 0.05141738802194595,
+      "Leishmaniasis": 0.03731837868690491,
+      "Lupus": 0.05110172927379608,
+      "Nuclear sclerosis": 0.049871038645505905,
+      "Otitis externa": 0.048707105219364166,
+      "Pruritus": 0.04285604506731033,
+      "Pyoderma": 0.04392748326063156,
+      "Rabies": 0.042899925261735916,
+      "Ringworm": 0.0604156069457531,
+      "Sarcoptic Mange": 0.04755331948399544,
+      "Sebaceous adenitis": 0.049978625029325485,
+      "Seborrhea": 0.052244409918785095,
+      "Skin tumor": 0.04692468419671059
+    }
+  },
+  {
+    "image": "08_iris_coloboma.png",
+    "model": "dog_disease_predictor",
+    "status": "ok",
+    "prediction": "Ear infections",
+    "score": 0.06650825589895248,
+    "scores": {
+      "Acral Lick Dermatitis": 0.05871858447790146,
+      "Acute moist dermatitis": 0.055658165365457535,
+      "Canine atopic dermatitis": 0.04473963752388954,
+      "Cherry Eye": 0.060754142701625824,
+      "Ear infections": 0.06650825589895248,
+      "External Parasites": 0.05007883533835411,
+      "Folliculitis": 0.047204263508319855,
+      "Healthy": 0.04646092653274536,
+      "Leishmaniasis": 0.03471757844090462,
+      "Lupus": 0.044880423694849014,
+      "Nuclear sclerosis": 0.04713742062449455,
+      "Otitis externa": 0.044850509613752365,
+      "Pruritus": 0.04288242757320404,
+      "Pyoderma": 0.04811609163880348,
+      "Rabies": 0.04678868129849434,
+      "Ringworm": 0.05171478912234306,
+      "Sarcoptic Mange": 0.047514334321022034,
+      "Sebaceous adenitis": 0.05309395492076874,
+      "Seborrhea": 0.059731148183345795,
+      "Skin tumor": 0.04844982922077179
+    }
+  }
+]
